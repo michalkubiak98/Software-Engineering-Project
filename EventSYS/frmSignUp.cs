@@ -11,7 +11,7 @@ namespace EventSYS
             InitializeComponent();
         }
 
-        //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
+        //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4 x
 
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
