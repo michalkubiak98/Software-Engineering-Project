@@ -42,6 +42,7 @@
             this.txtPassword = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.grdBooking)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,9 +63,9 @@
             this.grdBooking.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdBooking.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -83,7 +84,7 @@
             this.grdBooking.GridColor = System.Drawing.SystemColors.Control;
             this.grdBooking.HeaderBgColor = System.Drawing.Color.DarkSlateBlue;
             this.grdBooking.HeaderForeColor = System.Drawing.Color.White;
-            this.grdBooking.Location = new System.Drawing.Point(444, 82);
+            this.grdBooking.Location = new System.Drawing.Point(59, 106);
             this.grdBooking.Name = "grdBooking";
             this.grdBooking.ReadOnly = true;
             this.grdBooking.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -91,8 +92,9 @@
             this.grdBooking.RowTemplate.Height = 30;
             this.grdBooking.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grdBooking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdBooking.Size = new System.Drawing.Size(617, 333);
+            this.grdBooking.Size = new System.Drawing.Size(1041, 304);
             this.grdBooking.TabIndex = 111;
+            this.grdBooking.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdBooking_CellClick);
             // 
             // btnBack
             // 
@@ -171,6 +173,7 @@
             this.btnConfirm.Size = new System.Drawing.Size(134, 40);
             this.btnConfirm.TabIndex = 201;
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click_1);
             // 
             // lblEmail
             // 
@@ -225,11 +228,24 @@
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
             // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bunifuSeparator3.LineThickness = 1;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(59, 404);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Size = new System.Drawing.Size(341, 10);
+            this.bunifuSeparator3.TabIndex = 209;
+            this.bunifuSeparator3.Transparency = 255;
+            this.bunifuSeparator3.Vertical = false;
+            // 
             // frmBookingsMy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 503);
+            this.ClientSize = new System.Drawing.Size(1155, 474);
+            this.Controls.Add(this.bunifuSeparator3);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
@@ -264,5 +280,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtPassword;
         private System.Windows.Forms.Label lblPassword;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
     }
 }

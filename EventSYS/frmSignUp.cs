@@ -16,13 +16,19 @@ namespace EventSYS
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
 
-        private void frmSignUp_MouseDown(object sender, MouseEventArgs e)
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            loadImage();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
 
-        private void frmSignUp_MouseMove(object sender, MouseEventArgs e)
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
             {
@@ -31,10 +37,31 @@ namespace EventSYS
             }
         }
 
-        private void frmSignUp_MouseUp(object sender, MouseEventArgs e)
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
+
+        private void pctBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void pctBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void pctBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -134,9 +161,6 @@ namespace EventSYS
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            loadImage();
-        }
+
     }
 }

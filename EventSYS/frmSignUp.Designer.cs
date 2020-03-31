@@ -116,6 +116,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(441, 534);
             this.panel1.TabIndex = 200;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // lblContact
             // 
@@ -357,6 +360,9 @@
             this.pctBox.Size = new System.Drawing.Size(381, 534);
             this.pctBox.TabIndex = 202;
             this.pctBox.TabStop = false;
+            this.pctBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pctBox_MouseDown);
+            this.pctBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pctBox_MouseMove);
+            this.pctBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pctBox_MouseUp);
             // 
             // timer1
             // 
@@ -389,9 +395,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSignUp";
             this.Text = "SignUp";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmSignUp_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmSignUp_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmSignUp_MouseUp);
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).EndInit();

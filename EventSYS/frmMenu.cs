@@ -12,13 +12,14 @@ namespace EventSYS
 
         private Point _start_point = new Point(0, 0);
 
-        private void frmMainMenu_MouseDown(object sender, MouseEventArgs e)
+
+        private void subMenu1_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
 
-        private void frmMainMenu_MouseMove(object sender, MouseEventArgs e)
+        private void subMenu1_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
             {
@@ -27,10 +28,12 @@ namespace EventSYS
             }
         }
 
-        private void frmMainMenu_MouseUp(object sender, MouseEventArgs e)
+        private void subMenu1_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
+
+
 
         //Main
         public frmMenu()
@@ -90,17 +93,8 @@ namespace EventSYS
             VSReactive<int>.SetState("menu", int.Parse(((Control)sender).Tag.ToString()));
         }
 
-        private void btnSignOut_MouseHover(object sender, EventArgs e)
-        {
-        }
+    
 
-        private void btnExit_MouseHover(object sender, EventArgs e)
-        {
-        }
-
-        
-        
-
-        
+     
     }
 }

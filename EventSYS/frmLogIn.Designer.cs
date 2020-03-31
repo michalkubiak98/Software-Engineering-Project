@@ -38,10 +38,10 @@
             this.lblEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnSignUp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pctBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,9 @@
             this.pnlSide.Name = "pnlSide";
             this.pnlSide.Size = new System.Drawing.Size(357, 488);
             this.pnlSide.TabIndex = 186;
+            this.pnlSide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlSide_MouseDown);
+            this.pnlSide.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlSide_MouseMove);
+            this.pnlSide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlSide_MouseUp);
             // 
             // bunifuCustomLabel2
             // 
@@ -195,6 +198,21 @@
             this.btnLogIn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = global::EventSYS.Properties.Resources.icon__1_;
+            this.button1.Location = new System.Drawing.Point(320, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 34);
+            this.button1.TabIndex = 177;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
@@ -223,21 +241,9 @@
             this.pctBox.Size = new System.Drawing.Size(400, 516);
             this.pctBox.TabIndex = 187;
             this.pctBox.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = global::EventSYS.Properties.Resources.icon__1_;
-            this.button1.Location = new System.Drawing.Point(320, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 177;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pctBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pctBox_MouseDown);
+            this.pctBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pctBox_MouseMove);
+            this.pctBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pctBox_MouseUp);
             // 
             // frmLogIn
             // 
@@ -254,9 +260,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogIn";
             this.Text = "frmLogIn";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseUp);
             this.pnlSide.ResumeLayout(false);
             this.pnlSide.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).EndInit();

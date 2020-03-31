@@ -1,5 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
+using System.Data;
 
 namespace EventSYS
 {
@@ -205,5 +206,77 @@ namespace EventSYS
             conn.Close();
             return nxt;
         }
+
+        
+
+        public static DataSet getActiveBookings(int id)
+        {
+            String strSQL = "Select Bookings.bookingID as ID, Events.Title, Venues.VenueName as Venue, Venues.Town, Events.EventDate, Events.EventTime as Time, Bookings.NoTickets as Tickets, Bookings.BookingTotal as Total  From Venues, Events, Bookings  where Venues.VenueID = Events.VenueID  and Events.EventID = Bookings.EventID and Bookings.bookingID = '" + id + "' and Bookings.Status = 'Y' and Events.Status = 'Y' and Venues.Status = 'Y'";
+
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+            OracleCommand cmd = new OracleCommand(strSQL, conn);
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds, "ab");
+            conn.Close();
+            return ds;
+        }
+      
+
+
+        public static int getIDfromEmail(String email)
+        {
+            String strSQL = "Select CustID from Customers where email = '" + email + "'";
+
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+            OracleCommand cmd = new OracleCommand(strSQL, conn);
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+
+
+          
+            int id = 0;
+            using (OracleDataReader reader = cmd.ExecuteReader())
+            {
+
+                id = reader.GetInt32(0);
+                
+            }
+
+            conn.Close();
+            return id;
+        }
+
+
+
+        public void getABooking(int id)
+        {
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+
+            String strSQL = "Select * From Bookings Where BookingID = " + id;
+
+            OracleCommand cmd = new OracleCommand(strSQL, conn);
+            OracleDataReader dr = cmd.ExecuteReader();
+
+            dr.Read();
+
+            this.bookingID = dr.GetInt32(0);
+            this.custID = dr.GetInt32(1);
+            this.eventID = dr.GetInt32(2);
+            this.bookingDate = dr.GetString(3);
+            this.noTickets = dr.GetInt32(4);
+            this.bookingTotal = dr.GetDouble(5);
+            this.status = dr.GetChar(6);
+        }
+
+        
+
+
+
+
+
     }
 }

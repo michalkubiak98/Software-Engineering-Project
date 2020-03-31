@@ -34,25 +34,8 @@ namespace EventSYS
 
         private Point _start_point = new Point(0, 0);
 
-        private void frmLogIn_MouseDown(object sender, MouseEventArgs e)
-        {
-            _dragging = true;
-            _start_point = new Point(e.X, e.Y);
-        }
-
-        private void frmLogIn_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (_dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
-            }
-        }
-
-        private void frmLogIn_MouseUp(object sender, MouseEventArgs e)
-        {
-            _dragging = false;
-        }
+      
+        
 
    
         private void button1_Click(object sender, EventArgs e)
@@ -72,8 +55,7 @@ namespace EventSYS
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-
-            if (txtEmail.Equals("") || txtEmail.Equals(""))
+            if (txtEmail.Equals("") || txtPassword.Equals(""))
             {
                 MessageBox.Show("Please enter username and password");
 
@@ -82,7 +64,7 @@ namespace EventSYS
 
             if (Customer.checkEmail(txtEmail.Text))
             {
-                if (Customer.checkPass(txtEmail.Text, txtEmail.Text))
+                if (Customer.checkPass(txtPassword.Text, txtEmail.Text))
                 {
 
                     this.Hide();
@@ -116,6 +98,46 @@ namespace EventSYS
             nextForm.Show();
             nextForm.Left = this.Left;
             nextForm.Top = this.Top;
+        }
+
+        private void pnlSide_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void pnlSide_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void pnlSide_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void pctBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void pctBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void pctBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
         }
     }
 }
