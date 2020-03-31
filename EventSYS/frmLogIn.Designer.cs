@@ -38,10 +38,10 @@
             this.lblEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnSignUp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pctBox = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pctBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).BeginInit();
             this.SuspendLayout();
@@ -163,7 +163,7 @@
             // btnLogIn
             // 
             this.btnLogIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnLogIn.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogIn.BorderRadius = 7;
             this.btnLogIn.ButtonText = "Log In";
@@ -195,30 +195,6 @@
             this.btnLogIn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = global::EventSYS.Properties.Resources.icon__1_;
-            this.button1.Location = new System.Drawing.Point(320, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 177;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pctBox
-            // 
-            this.pctBox.Image = ((System.Drawing.Image)(resources.GetObject("pctBox.Image")));
-            this.pctBox.Location = new System.Drawing.Point(0, 0);
-            this.pctBox.Name = "pctBox";
-            this.pctBox.Size = new System.Drawing.Size(400, 516);
-            this.pctBox.TabIndex = 187;
-            this.pctBox.TabStop = false;
-            // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
@@ -238,6 +214,30 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pctBox
+            // 
+            this.pctBox.Image = ((System.Drawing.Image)(resources.GetObject("pctBox.Image")));
+            this.pctBox.Location = new System.Drawing.Point(0, 0);
+            this.pctBox.Name = "pctBox";
+            this.pctBox.Size = new System.Drawing.Size(400, 516);
+            this.pctBox.TabIndex = 187;
+            this.pctBox.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = global::EventSYS.Properties.Resources.icon__1_;
+            this.button1.Location = new System.Drawing.Point(320, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 34);
+            this.button1.TabIndex = 177;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogIn
             // 

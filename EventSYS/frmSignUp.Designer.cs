@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.lblTermsAccept = new System.Windows.Forms.Label();
             this.chkTerms = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.lblHead = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pctBox = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +93,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bunifuSeparator1);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.lblContact);
             this.panel1.Controls.Add(this.txtContact);
@@ -349,7 +350,7 @@
             // pctBox
             // 
             this.pctBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pctBox.Image = ((System.Drawing.Image)(resources.GetObject("pctBox.Image")));
+            this.pctBox.Image = global::EventSYS.Properties.Resources._31;
             this.pctBox.InitialImage = null;
             this.pctBox.Location = new System.Drawing.Point(432, 0);
             this.pctBox.Name = "pctBox";
@@ -360,8 +361,20 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 3000;
+            this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(202, 56);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(61, 13);
+            this.bunifuSeparator1.TabIndex = 214;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
             // 
             // frmSignUp
             // 
@@ -409,5 +422,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblHead;
         private System.Windows.Forms.PictureBox pctBox;
         private System.Windows.Forms.Timer timer1;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
     }
 }

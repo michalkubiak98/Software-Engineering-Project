@@ -23,8 +23,10 @@ namespace EventSYS
                 imageNumber = 1;
             }
 
-            pctBox.ImageLocation = string.Format(@"Images\{0}.png", imageNumber);
+            pctBox.ImageLocation = string.Format(@"..\..\Resources\{0}.png", imageNumber);
             imageNumber++;
+
+          
         }
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4

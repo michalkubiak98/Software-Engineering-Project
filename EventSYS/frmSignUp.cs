@@ -54,7 +54,7 @@ namespace EventSYS
                 imageNumber = 1;
             }
 
-            pctBox.ImageLocation = string.Format(@"Images2\{0}.png", imageNumber);
+            pctBox.ImageLocation = string.Format(@"..\..\Resources\{0}.jpg", imageNumber);
             imageNumber++;
         }
 
