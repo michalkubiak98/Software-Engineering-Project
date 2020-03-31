@@ -49,7 +49,7 @@ namespace EventSYS
 
         private void loadImage()
         {
-            if (imageNumber == 5)
+            if (imageNumber == 4)
             {
                 imageNumber = 1;
             }

@@ -45,9 +45,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MouseDetect = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.subMenu1 = new EventSYS.subMenu();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.btnExit = new System.Windows.Forms.Button();
-            this.subMenu1 = new EventSYS.subMenu();
             this.pnlMainMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -372,6 +372,15 @@
             this.panel1.Size = new System.Drawing.Size(734, 633);
             this.panel1.TabIndex = 39;
             // 
+            // subMenu1
+            // 
+            this.bunifuTransition1.SetDecoration(this.subMenu1, BunifuAnimatorNS.DecorationType.None);
+            this.subMenu1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.subMenu1.Location = new System.Drawing.Point(0, 0);
+            this.subMenu1.Name = "subMenu1";
+            this.subMenu1.Size = new System.Drawing.Size(814, 633);
+            this.subMenu1.TabIndex = 0;
+            // 
             // bunifuTransition1
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
@@ -408,15 +417,6 @@
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
-            // subMenu1
-            // 
-            this.bunifuTransition1.SetDecoration(this.subMenu1, BunifuAnimatorNS.DecorationType.None);
-            this.subMenu1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.subMenu1.Location = new System.Drawing.Point(0, 0);
-            this.subMenu1.Name = "subMenu1";
-            this.subMenu1.Size = new System.Drawing.Size(814, 633);
-            this.subMenu1.TabIndex = 0;
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,7 +431,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmMainMenu_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmMainMenu_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmMainMenu_MouseUp);
