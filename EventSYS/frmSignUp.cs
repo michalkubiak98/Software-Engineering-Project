@@ -45,20 +45,44 @@ namespace EventSYS
                 Environment.Exit(0);
             }
         }
+        private int imageNumber = 2;
 
-        private void btnSignUp_Click_1(object sender, EventArgs e)
+        private void loadImage()
         {
-            if (txtName.Text.Equals("") || txtPassword.Text.Equals("") || txtPasswordConfirm.Text.Equals("") || txtEmail.Text.Equals("") || txtContact.Text.Equals(""))
+            if (imageNumber == 5)
+            {
+                imageNumber = 2;
+            }
+
+            pctBox.ImageLocation = string.Format(@"Images2\{0}.png", imageNumber);
+            imageNumber++;
+        }
+
+ 
+        
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogIn nextForm = new frmLogIn();
+            nextForm.Show();
+            nextForm.Left = this.Left;
+            nextForm.Top = this.Top;
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text.Equals("") || txtPassword.Text.Equals("") || txtConfirmPassword.Text.Equals("") || txtEmail.Text.Equals("") || txtContact.Text.Equals(""))
             {
                 MessageBox.Show("Fill Out All Details!");
                 txtName.Focus();
                 return;
             }
 
-            if (txtPasswordConfirm.Text != txtPassword.Text)
+            if (txtConfirmPassword.Text != txtPassword.Text)
             {
                 MessageBox.Show("Passwords Not Matching");
-                txtPasswordConfirm.Focus();
+                txtConfirmPassword.Focus();
                 return;
             }
 
@@ -110,13 +134,9 @@ namespace EventSYS
             }
         }
 
-        private void btnLogIn_Click_1(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Hide();
-            frmLogIn nextForm = new frmLogIn();
-            nextForm.Show();
-            nextForm.Left = this.Left;
-            nextForm.Top = this.Top;
+            loadImage();
         }
     }
 }

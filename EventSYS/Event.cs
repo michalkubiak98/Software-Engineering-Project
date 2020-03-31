@@ -466,6 +466,13 @@ namespace EventSYS
             return result;
         }
 
+
+
+
+
+
+
+
         public static String noEvents(String date, int id)
         {
             int result = 0;

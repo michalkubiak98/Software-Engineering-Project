@@ -6,9 +6,25 @@ namespace EventSYS
 {
     public partial class frmLogIn : Form
     {
+        
         public frmLogIn()
         {
             InitializeComponent();
+        }
+
+
+        //Slider https://www.youtube.com/watch?v=Ie09lhMEczU
+
+        private int imageNumber = 1;
+
+        private void loadImage()
+        {
+            if(imageNumber == 5){
+                imageNumber = 1;
+            }
+
+            pctBox.ImageLocation = string.Format(@"Images\{0}.png", imageNumber);
+            imageNumber++;
         }
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
@@ -36,9 +52,26 @@ namespace EventSYS
             _dragging = false;
         }
 
-        private void btnLogIn_Click_1(object sender, EventArgs e)
+   
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Equals("") || txtPassword.Equals(""))
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            loadImage();
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+
+            if (txtEmail.Equals("") || txtEmail.Equals(""))
             {
                 MessageBox.Show("Please enter username and password");
 
@@ -47,13 +80,19 @@ namespace EventSYS
 
             if (Customer.checkEmail(txtEmail.Text))
             {
-                if (Customer.checkPass(txtPassword.Text, txtEmail.Text))
+                if (Customer.checkPass(txtEmail.Text, txtEmail.Text))
                 {
+
                     this.Hide();
                     frmMenu nextForm = new frmMenu();
+
                     nextForm.Show();
+
                     nextForm.Left = this.Left;
                     nextForm.Top = this.Top;
+
+
+
                 }
                 else
                 {
@@ -68,23 +107,13 @@ namespace EventSYS
             }
         }
 
-        private void btnSignUp_Click_1(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmSignUp nextForm = new frmSignUp();
             nextForm.Show();
             nextForm.Left = this.Left;
             nextForm.Top = this.Top;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                Environment.Exit(0);
-            }
         }
     }
 }

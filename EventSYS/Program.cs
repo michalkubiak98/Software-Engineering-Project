@@ -11,9 +11,10 @@ namespace EventSYS
         [STAThread]
         private static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenu());
+            Application.Run(new frmLogIn());
         }
 
         public static bool IsInDesignMode()

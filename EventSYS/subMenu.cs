@@ -7,6 +7,8 @@ namespace EventSYS
 {
     public partial class subMenu : UserControl
     {
+
+
         public subMenu()
         {
             InitializeComponent();
@@ -14,7 +16,11 @@ namespace EventSYS
 
             //https://www.youtube.com/watch?v=VJoC8_rUQUY&t=64s
             VSReactive<int>.Subscribe("menu", e => tab1.SelectedIndex = e);
+
+            
         }
+
+
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
         private bool _dragging = false;
@@ -142,5 +148,5 @@ namespace EventSYS
         private void btnAccount_Click(object sender, EventArgs e)
         {
         }
-    }
+     }
 }

@@ -33,27 +33,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.btnSignOut = new System.Windows.Forms.Button();
             this.pnlMainMenu = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.MouseDetect = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.btnExit = new System.Windows.Forms.Button();
             this.tab5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tab6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tab4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tab3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tab2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tab1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MouseDetect = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
             this.subMenu1 = new EventSYS.subMenu();
             this.pnlMainMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSignOut
@@ -89,78 +89,6 @@
             this.pnlMainMenu.Name = "pnlMainMenu";
             this.pnlMainMenu.Size = new System.Drawing.Size(200, 633);
             this.pnlMainMenu.TabIndex = 33;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 106);
-            this.panel2.TabIndex = 39;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.bunifuTransition1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 106);
-            this.panel3.TabIndex = 40;
-            // 
-            // MouseDetect
-            // 
-            this.MouseDetect.Enabled = true;
-            this.MouseDetect.Tick += new System.EventHandler(this.MouseDetect_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.subMenu1);
-            this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 633);
-            this.panel1.TabIndex = 39;
-            // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
-            this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
-            // 
-            // btnExit
-            // 
-            this.bunifuTransition1.SetDecoration(this.btnExit, BunifuAnimatorNS.DecorationType.None);
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = global::EventSYS.Properties.Resources.icon__1___1_2;
-            this.btnExit.Location = new System.Drawing.Point(1103, 6);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(38, 40);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
             // tab5
             // 
@@ -384,6 +312,27 @@
             this.tab1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab1.Click += new System.EventHandler(this.sideMenu_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 106);
+            this.panel2.TabIndex = 39;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.bunifuTransition1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 106);
+            this.panel3.TabIndex = 40;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -408,6 +357,57 @@
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
+            // MouseDetect
+            // 
+            this.MouseDetect.Enabled = true;
+            this.MouseDetect.Tick += new System.EventHandler(this.MouseDetect_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.subMenu1);
+            this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(200, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(734, 633);
+            this.panel1.TabIndex = 39;
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
+            this.bunifuTransition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation1;
+            // 
+            // btnExit
+            // 
+            this.bunifuTransition1.SetDecoration(this.btnExit, BunifuAnimatorNS.DecorationType.None);
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = global::EventSYS.Properties.Resources.icon__1___1_2;
+            this.btnExit.Location = new System.Drawing.Point(1103, 6);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(38, 40);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
+            // 
             // subMenu1
             // 
             this.bunifuTransition1.SetDecoration(this.subMenu1, BunifuAnimatorNS.DecorationType.None);
@@ -431,15 +431,16 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmMainMenu_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmMainMenu_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmMainMenu_MouseUp);
             this.pnlMainMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

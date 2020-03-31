@@ -62,23 +62,14 @@ namespace EventSYS
             _dragging = false;
         }
 
+        private void frmBookingsMy_Load(object sender, EventArgs e)
+        {
+            grdBooking.DataSource = Event.getActiveEventsMini().Tables["aem"];
+        }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (txtID.Text.Equals(""))
-            {
-                MessageBox.Show("You must add a booking ID", "Booking ID Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtID.Focus();
-                return;
-            }
 
-            DialogResult dialogResult = MessageBox.Show("Confirm this information?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                Controls.Clear();
-
-                InitializeComponent();
-            }
         }
     }
 }

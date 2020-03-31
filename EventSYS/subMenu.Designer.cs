@@ -151,10 +151,11 @@
             // 
             // lblDash
             // 
+            this.lblDash.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
             this.lblDash.AutoSize = true;
             this.lblDash.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDash.Location = new System.Drawing.Point(404, 229);
+            this.lblDash.Location = new System.Drawing.Point(408, 229);
             this.lblDash.Name = "lblDash";
             this.lblDash.Size = new System.Drawing.Size(145, 33);
             this.lblDash.TabIndex = 0;
@@ -941,7 +942,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(945, 34);
+            this.pnlTop.Size = new System.Drawing.Size(945, 29);
             this.pnlTop.TabIndex = 1;
             // 
             // subMenu
@@ -1000,7 +1001,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAddEvent;
         private System.Windows.Forms.Label lblDashDesc;
         private System.Windows.Forms.PictureBox picDashboard;
-        private System.Windows.Forms.Label lblDash;
         private System.Windows.Forms.PictureBox picVenue;
         private System.Windows.Forms.Label lblVenueDesc;
         private System.Windows.Forms.Label lblVenueMenu;
@@ -1022,5 +1022,6 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator5;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblDash;
     }
 }
