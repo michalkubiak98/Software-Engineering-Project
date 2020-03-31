@@ -2,7 +2,11 @@
 
 
 
-Please import the bunifu_UI_1.5.2.dll bunifu framework components in the toolbox for the project to work correctly
+Downlaod NuGet packages as follows: VisualReactiveWinForms by KimToo, LiveCharts for Win Forms
+
+Rigth Click References in the solution explorer on the right just below the main solution file and click add reference
+Browse to the Bunifu DLL file that is included in this repository, apply.
+
 
 
 
