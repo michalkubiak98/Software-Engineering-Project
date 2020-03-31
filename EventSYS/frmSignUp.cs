@@ -45,13 +45,13 @@ namespace EventSYS
                 Environment.Exit(0);
             }
         }
-        private int imageNumber = 2;
+        private int imageNumber = 1;
 
         private void loadImage()
         {
             if (imageNumber == 5)
             {
-                imageNumber = 2;
+                imageNumber = 1;
             }
 
             pctBox.ImageLocation = string.Format(@"Images2\{0}.png", imageNumber);
