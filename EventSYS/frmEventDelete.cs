@@ -42,24 +42,19 @@ namespace EventSYS
             loadEvents();
         }
 
-        public void loadEvents()
+       
 
+        public void loadEvents()
         {
             DataSet ds = new DataSet();
             ds = Event.getActiveEvents();
-            // check that there are venues to delete
-            if (ds.Tables["ae"].Rows.Count == 0)
-            {
-                cboEvents.SelectedIndex = -1;
-                cboEvents.Items.Clear();
-                cboEvents.Text = "No Events";
-                return;
-            }
 
+            cboEvents.Items.Clear();
             //load combo box
             for (int i = 0; i < ds.Tables["ae"].Rows.Count; i++)
             {
-                cboEvents.Items.Add(ds.Tables[0].Rows[i][0].ToString().PadLeft(3, '0') + " " + ds.Tables[0].Rows[i][3].ToString());
+                cboEvents.Items.Add(ds.Tables[0].Rows[i][3].ToString());
+                
             }
         }
 
@@ -105,7 +100,7 @@ namespace EventSYS
             }
 
             Event anEvent = new Event();
-            anEvent.getAnEvent(Convert.ToInt32(cboEvents.Text.Substring(0, 3))); //change in db to 2
+            anEvent.getAnEvent(Event.getIDFromName(cboEvents.Text));
 
             txtID.Text = anEvent.getEventID().ToString();
             txtVenue.Text = anEvent.getVenueName().ToString();

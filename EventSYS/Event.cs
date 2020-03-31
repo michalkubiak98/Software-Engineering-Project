@@ -302,7 +302,7 @@ namespace EventSYS
 
         public static DataSet getActiveEvents()
         {
-            String strSQL = "Select * From Events WHERE Status = 'Y' Order By EventID where EventDate > TO_CHAR(SYSDATE, 'DD/MM/YYYYY')";
+            String strSQL = "Select * From Events WHERE Status = 'Y' and  EventDate >= (Select TO_CHAR(SYSDATE, 'YYYY-MM-DD') from dual)";
 
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
@@ -317,8 +317,8 @@ namespace EventSYS
 
         public static DataSet getActiveEventsMini()
         {
-            String strSQL = "Select EventID, VenueName, Title, Description, EventDate, EventTime, TicketsAvailable, Price From Events WHERE Status = 'Y' and  EventDate > TO_CHAR(SYSDATE, 'DD/MM/YYYYY')";
-
+            String strSQL = "Select EventID, VenueName, Title, Description, EventDate, EventTime, TicketsAvailable, Price From Events WHERE Status = 'Y' and  EventDate >= (Select TO_CHAR(SYSDATE, 'YYYY-MM-DD') from dual)";
+            
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
             OracleCommand cmd = new OracleCommand(strSQL, conn);
@@ -351,6 +351,18 @@ namespace EventSYS
             this.ticketsAvailable = dr.GetInt32(7);
             this.price = dr.GetDouble(8);
         }
+        public static int getIDFromName(String name)
+        {
+            String strSQL = "SELECT EventID From Events WHERE title = '" + name + "'";
+
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            OracleCommand cmd = new OracleCommand(strSQL, conn);
+            conn.Open();
+            OracleDataReader dr = cmd.ExecuteReader();
+            dr.Read();
+            return dr.GetInt32(0);
+        }
+
 
         public static Boolean checkEventTitle(String title, int venueID)
         {
@@ -461,7 +473,7 @@ namespace EventSYS
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            String strSQL = "Select Count(EventID) From Events Where eventDate like  '%" + date + "' and VenueID = '" + id + "'";
+            String strSQL = "Select Count(EventID) From Events Where eventDate like  '" + date + "%' and VenueID = '" + id + "'";
 
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
@@ -485,7 +497,7 @@ namespace EventSYS
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            String strSQL = "SELECT SUM(NoTickets) FROM Bookings B JOIN Events E ON B.EventID = E.EventID WHERE VenueID =" + id + " AND BOOKINGDATE LIKE '%" + date + "'";
+            String strSQL = "SELECT SUM(NoTickets) FROM Bookings B JOIN Events E ON B.EventID = E.EventID WHERE VenueID =" + id + " AND BOOKINGDATE LIKE '" + date + "%'";
 
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
@@ -508,7 +520,7 @@ namespace EventSYS
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            String strSQL = "SELECT SUM(BookingTotal) FROM Bookings B JOIN Events E ON B.EventID = E.EventID WHERE VenueID =" + id + " AND BOOKINGDATE LIKE '%" + date + "'";
+            String strSQL = "SELECT SUM(BookingTotal) FROM Bookings B JOIN Events E ON B.EventID = E.EventID WHERE VenueID =" + id + " AND BOOKINGDATE LIKE '" + date + "%'";
 
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
@@ -531,7 +543,7 @@ namespace EventSYS
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            String strSQL = "SELECT SUM(BookingTotal) FROM Bookings WHERE BOOKINGDATE LIKE '%" + date + "'";
+            String strSQL = "SELECT SUM(BookingTotal) FROM Bookings B JOIN Events E ON B.EventID = E.EventID WHERE BOOKINGDATE LIKE '" + date + "%'";
 
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
@@ -555,7 +567,7 @@ namespace EventSYS
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            String strSQL = "SELECT SUM(NoTickets) FROM Bookings WHERE BOOKINGDATE LIKE '%" + date + "'";
+            String strSQL = "SELECT SUM(NoTickets) FROM Bookings WHERE BOOKINGDATE LIKE '" + date + "%'";
 
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
@@ -579,7 +591,7 @@ namespace EventSYS
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            String strSQL = "Select Count(EventID) From Events Where eventDate like  '%" + date + "'";
+            String strSQL = "Select Count(EventID) From Events Where eventDate like  '" + date + "%'";
 
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();

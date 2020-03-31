@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace EventSYS
@@ -23,7 +24,7 @@ namespace EventSYS
             Utilities.BunifuMetro(txtTitle, 50);
             Utilities.BunifuMetro(txtDescription, 140);
             Utilities.BunifuMetro(txtTime, 5);
-            Utilities.BunifuMetro(txtTicketsAvailable, 4);
+            Utilities.BunifuMetro(txtTicketsAvailable, 5);
             Utilities.BunifuMetro(txtPrice, 6);
         }
 
@@ -89,53 +90,68 @@ namespace EventSYS
                     String name = Convert.ToString(cboVenue.SelectedItem);
                     Event myEvent = new Event();
 
-                    myEvent.setEventID(Convert.ToInt32(txtID.Text));
-                    myEvent.setVenueID(Venue.getIDFromName(name));
-                    myEvent.setVenueName(name);
-                    myEvent.setTitle(Convert.ToString(txtTitle.Text));
-                    myEvent.setDescription(Convert.ToString(txtDescription.Text));
-                    myEvent.setEventDate(dtpDate.Value.ToString().Substring(0, 10));
-                    myEvent.setEventTime(txtTime.Text);
-                    myEvent.setTicketsAvailable(Convert.ToInt32(txtTicketsAvailable.Text));
-                    myEvent.setPrice(Convert.ToDouble(txtPrice.Text));
+                   
 
-                    if (myEvent.isVenueFree(myEvent.getEventDate()))
+                    DateTime dt1 = DateTime.Parse(dtpDate.Value.ToString("yyyy-MM-dd"));
+                    DateTime dt2 = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd"));
+
+                    if (dt1.Date >= dt2.Date)
                     {
-                        int ticks = Venue.getMaxCapacity(cboVenue.Text);
 
-                        if (Convert.ToInt32(txtTicketsAvailable.Text) < ticks)
+                        myEvent.setEventID(Convert.ToInt32(txtID.Text));
+                        myEvent.setVenueID(Venue.getIDFromName(name));
+                        myEvent.setVenueName(name);
+                        myEvent.setTitle(Convert.ToString(txtTitle.Text));
+                        myEvent.setDescription(Convert.ToString(txtDescription.Text));
+                        myEvent.setEventDate(dtpDate.Value.ToString("yyyy-MM-dd"));
+                        myEvent.setEventTime(txtTime.Text);
+                        myEvent.setTicketsAvailable(Convert.ToInt32(txtTicketsAvailable.Text));
+                        myEvent.setPrice(Convert.ToDouble(txtPrice.Text));
+
+                        if (myEvent.isVenueFree(myEvent.getEventDate()))
                         {
-                            try
-                            {
-                                myEvent.AddEvent();
-                                MessageBox.Show("All Done!");
-                                grdAddEvent.DataSource = Event.getActiveEventsMini().Tables["aem"];
-                                txtID.Text = Convert.ToString(Event.getNextID());
+                            int ticks = Venue.getMaxCapacity(cboVenue.Text);
 
-                                txtTitle.Text = "";
-                                txtDescription.Text = "";
-                                dtpDate.Refresh();
-                                txtTime.Text = "";
-                                txtPrice.Text = "";
-                                txtTicketsAvailable.Text = "";
-                            }
-                            catch (Oracle.ManagedDataAccess.Client.OracleException)
+                            if (Convert.ToInt32(txtTicketsAvailable.Text) <= ticks)
                             {
-                                MessageBox.Show("The price or time format you have entered is incorrect! " +
-                                    "Try and put a decimal point in the price (eg. 120.00) or a colon (:) in the time box!");
+                                try
+                                {
+                                    myEvent.AddEvent();
+                                    MessageBox.Show("All Done!");
+                                    grdAddEvent.DataSource = Event.getActiveEventsMini().Tables["aem"];
+                                    txtID.Text = Convert.ToString(Event.getNextID());
+
+                                    txtTitle.Text = "";
+                                    txtDescription.Text = "";
+                                    dtpDate.Refresh();
+                                    txtTime.Text = "";
+                                    txtPrice.Text = "";
+                                    txtTicketsAvailable.Text = "";
+                                }
+                                catch (Oracle.ManagedDataAccess.Client.OracleException)
+                                {
+                                    MessageBox.Show("The price or time format you have entered is incorrect! " +
+                                        "Try and put a decimal point in the price (eg. 120.00) or a colon (:) in the time box!");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Cannot have more than " + ticks + " tickets for this venue!");
+                                return;
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Cannot have more than " + ticks + " tickets for this venue!");
+                            MessageBox.Show("This venue already has an event that day!");
                             return;
                         }
                     }
                     else
                     {
-                        MessageBox.Show("This venue already has an event that day!");
-                        return;
+                        MessageBox.Show("Event must be in the future!");
                     }
+
+
                 }
                 else
                 {

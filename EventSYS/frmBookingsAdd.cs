@@ -117,12 +117,13 @@ namespace EventSYS
                         {
                             Booking booking = new Booking();
                             booking.setBookingID(Convert.ToInt32(txtID.Text));
-                            booking.setCustID(Customer.getCustIDFromEmail(txtEmail.Text));
+                            booking.setCustID(Customer.getCustIDFromEmail(Convert.ToString(txtEmail.Text)));
                             booking.setEventID(Convert.ToInt32(txtEventID.Text));
-                            booking.setBookingDate(DateTime.Now.ToString("M/d/yyyy"));
+                            booking.setBookingDate(DateTime.Now.ToString("yyyy-MM-dd"));
                             booking.setNoTickets(Convert.ToInt32(cboTickets.Text));
                             booking.setBookingTotal(Convert.ToDouble(txtTotal.Text));
                             booking.AddBooking();
+                            
 
                             MessageBox.Show("All Done!");
                             grdEvents.DataSource = Event.getActiveEventsMini().Tables["aem"];

@@ -235,7 +235,7 @@ namespace EventSYS
 
         public static int getCustIDFromEmail(String email)
         {
-            String strSQL = "Select custID From Customers WHERE Email = '" + email + "'";
+            String strSQL = "Select custID From Customers WHERE Email = '"+ email + "'";
 
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();

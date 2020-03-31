@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -46,7 +47,27 @@ namespace EventSYS
             txtNoEvents.Visible = false;
             txtNoTicketsSold.Visible = false;
             txtRevenue.Visible = false;
+
+            DataSet ds = new DataSet();
+            ds = Venue.getActiveVenues();
+            // check that there are venues to delete
+            if (ds.Tables["av"].Rows.Count == 0)
+            {
+                cboVenues.SelectedIndex = -1;
+                cboVenues.Items.Clear();
+                cboVenues.Text = "No Venues";
+                return;
+            }
+
+            //load combo box
+            for (int i = 0; i < ds.Tables["av"].Rows.Count; i++)
+            {
+                cboVenues.Items.Add(ds.Tables[0].Rows[i][1].ToString());
+            }
+
+
         }
+        
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
@@ -56,7 +77,7 @@ namespace EventSYS
             {
                 String date = "";
 
-                if (cboVenue.SelectedIndex >= 0)
+                if (cboVenues.SelectedIndex >= 0)
                 {
                     if (cboYear.SelectedIndex >= 0)
                     {
@@ -64,7 +85,7 @@ namespace EventSYS
                         if (cboMonth.SelectedIndex >= 0)
                         {
                             String month = cboMonth.Text.Substring(0, 2);
-                            date = month + "/" + year;
+                            date = year + "-" + month;
                         }
                         else
                         {
@@ -78,7 +99,7 @@ namespace EventSYS
                         txtNoTicketsSold.Visible = true;
                         txtRevenue.Visible = true;
 
-                        String venueName = cboVenue.Text;
+                        String venueName = cboVenues.Text;
                         txtNoEvents.Text = Event.noEvents(date, Venue.getIDFromName(venueName));
                         txtNoTicketsSold.Text = Event.noTicketsSold(date, Venue.getIDFromName(venueName));
                         txtRevenue.Text = Event.totalRevenue(date, Venue.getIDFromName(venueName));

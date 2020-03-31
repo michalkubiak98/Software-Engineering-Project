@@ -69,18 +69,19 @@ namespace EventSYS
                     Values = new ChartValues<ObservablePoint>
                     {
                        //Only pass in -MM- format
-                       new ObservablePoint(1, Event.TotalRevenueYear("01/" + year)),
-                       new ObservablePoint(2, Event.TotalRevenueYear("02/" + year)),
-                       new ObservablePoint(3, Event.TotalRevenueYear("03/" + year)),
-                       new ObservablePoint(4, Event.TotalRevenueYear("04/" + year)),
-                       new ObservablePoint(5, Event.TotalRevenueYear("05/" + year)),
-                       new ObservablePoint(6, Event.TotalRevenueYear("06/" + year)),
-                       new ObservablePoint(7, Event.TotalRevenueYear("07/" + year)),
-                       new ObservablePoint(8, Event.TotalRevenueYear("08/" + year)),
-                       new ObservablePoint(9, Event.TotalRevenueYear("09/" + year)),
-                       new ObservablePoint(10, Event.TotalRevenueYear("10/" + year)),
-                       new ObservablePoint(11, Event.TotalRevenueYear("11/" + year)),
-                       new ObservablePoint(12, Event.TotalRevenueYear("12/" + year))
+                       
+                       new ObservablePoint(1, Event.TotalRevenueYear(year + "-01")),
+                       new ObservablePoint(2, Event.TotalRevenueYear(year + "-02")),
+                       new ObservablePoint(3, Event.TotalRevenueYear(year + "-03")),
+                       new ObservablePoint(4, Event.TotalRevenueYear(year + "-04")),
+                       new ObservablePoint(5, Event.TotalRevenueYear(year + "-05")),
+                       new ObservablePoint(6, Event.TotalRevenueYear(year + "-06")),
+                       new ObservablePoint(7, Event.TotalRevenueYear(year + "-07")),
+                       new ObservablePoint(8, Event.TotalRevenueYear(year + "-08")),
+                       new ObservablePoint(9, Event.TotalRevenueYear(year + "-09")),
+                       new ObservablePoint(10, Event.TotalRevenueYear(year + "-10")),
+                       new ObservablePoint(11, Event.TotalRevenueYear(year + "-11")),
+                       new ObservablePoint(12, Event.TotalRevenueYear(year + "-12"))
                      },
 
                     PointGeometrySize = 10,
@@ -93,18 +94,19 @@ namespace EventSYS
                     Values = new ChartValues<ObservablePoint>
                     {
                        //Only pass in -MM- format
-                       new ObservablePoint(1, Event.eventsYear("01/" + year)),
-                       new ObservablePoint(2, Event.eventsYear("02/" + year)),
-                       new ObservablePoint(3, Event.eventsYear("03/" + year)),
-                       new ObservablePoint(4, Event.eventsYear("04/" + year)),
-                       new ObservablePoint(5, Event.eventsYear("05/" + year)),
-                       new ObservablePoint(6, Event.eventsYear("06/" + year)),
-                       new ObservablePoint(7, Event.eventsYear("07/" + year)),
-                       new ObservablePoint(8, Event.eventsYear("08/" + year)),
-                       new ObservablePoint(9, Event.eventsYear("09/" + year)),
-                       new ObservablePoint(10, Event.eventsYear("10/" + year)),
-                       new ObservablePoint(11, Event.eventsYear("11/" + year)),
-                       new ObservablePoint(12, Event.eventsYear("12/" + year))
+                       new ObservablePoint(1, Event.eventsYear(year + "-01")),
+                       new ObservablePoint(2, Event.eventsYear(year + "-02")),
+                       new ObservablePoint(3, Event.eventsYear(year + "-03")),
+                       new ObservablePoint(4, Event.eventsYear(year + "-04")),
+                       new ObservablePoint(5, Event.eventsYear(year + "-05")),
+                       new ObservablePoint(6, Event.eventsYear(year + "-06")),
+                       new ObservablePoint(7, Event.eventsYear(year + "-07")),
+                       new ObservablePoint(8, Event.eventsYear(year + "-08")),
+                       new ObservablePoint(9, Event.eventsYear(year + "-09")),
+                       new ObservablePoint(10, Event.eventsYear(year + "-10")),
+                       new ObservablePoint(11, Event.eventsYear(year + "-11")),
+                       new ObservablePoint(12, Event.eventsYear(year + "-12"))
+                    
                      },
 
                     PointGeometrySize = 10,
@@ -116,18 +118,19 @@ namespace EventSYS
                     Values = new ChartValues<ObservablePoint>
                     {
                        //Only pass in -MM- format
-                       new ObservablePoint(1, Event.TicketsSoldYear("01/" + year)),
-                       new ObservablePoint(2, Event.TicketsSoldYear("02/" + year)),
-                       new ObservablePoint(3, Event.TicketsSoldYear("03/" + year)),
-                       new ObservablePoint(4, Event.TicketsSoldYear("04/" + year)),
-                       new ObservablePoint(5, Event.TicketsSoldYear("05/" + year)),
-                       new ObservablePoint(6, Event.TicketsSoldYear("06/" + year)),
-                       new ObservablePoint(7, Event.TicketsSoldYear("07/" + year)),
-                       new ObservablePoint(8, Event.TicketsSoldYear("08/" + year)),
-                       new ObservablePoint(9, Event.TicketsSoldYear("09/" + year)),
-                       new ObservablePoint(10, Event.TicketsSoldYear("10/" + year)),
-                       new ObservablePoint(11, Event.TicketsSoldYear("11/" + year)),
-                       new ObservablePoint(12, Event.TicketsSoldYear("12/" + year))
+                       
+                       new ObservablePoint(1, Event.TicketsSoldYear(year + "-01")),
+                       new ObservablePoint(2, Event.TicketsSoldYear(year + "-02")),
+                       new ObservablePoint(3, Event.TicketsSoldYear(year + "-03")),
+                       new ObservablePoint(4, Event.TicketsSoldYear(year + "-04")),
+                       new ObservablePoint(5, Event.TicketsSoldYear(year + "-05")),
+                       new ObservablePoint(6, Event.TicketsSoldYear(year + "-06")),
+                       new ObservablePoint(7, Event.TicketsSoldYear(year + "-07")),
+                       new ObservablePoint(8, Event.TicketsSoldYear(year + "-08")),
+                       new ObservablePoint(9, Event.TicketsSoldYear(year + "-09")),
+                       new ObservablePoint(10, Event.TicketsSoldYear(year + "-10")),
+                       new ObservablePoint(11, Event.TicketsSoldYear(year + "-11")),
+                       new ObservablePoint(12, Event.TicketsSoldYear(year + "-12"))
                      },
 
                     PointGeometrySize = 10,

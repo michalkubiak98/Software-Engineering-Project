@@ -34,7 +34,7 @@
             this.txtNoEvents = new System.Windows.Forms.TextBox();
             this.cboMonth = new System.Windows.Forms.ComboBox();
             this.cboYear = new System.Windows.Forms.ComboBox();
-            this.cboVenue = new System.Windows.Forms.ComboBox();
+            this.cboVenues = new System.Windows.Forms.ComboBox();
             this.lblID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,19 +99,22 @@
             // 
             this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboYear.FormattingEnabled = true;
+            this.cboYear.Items.AddRange(new object[] {
+            "2019",
+            "2020"});
             this.cboYear.Location = new System.Drawing.Point(402, 152);
             this.cboYear.Name = "cboYear";
             this.cboYear.Size = new System.Drawing.Size(121, 21);
             this.cboYear.TabIndex = 112;
             // 
-            // cboVenue
+            // cboVenues
             // 
-            this.cboVenue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboVenue.FormattingEnabled = true;
-            this.cboVenue.Location = new System.Drawing.Point(292, 116);
-            this.cboVenue.Name = "cboVenue";
-            this.cboVenue.Size = new System.Drawing.Size(231, 21);
-            this.cboVenue.TabIndex = 110;
+            this.cboVenues.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVenues.FormattingEnabled = true;
+            this.cboVenues.Location = new System.Drawing.Point(292, 116);
+            this.cboVenues.Name = "cboVenues";
+            this.cboVenues.Size = new System.Drawing.Size(231, 21);
+            this.cboVenues.TabIndex = 110;
             // 
             // lblID
             // 
@@ -294,7 +297,7 @@
             this.Controls.Add(this.txtNoEvents);
             this.Controls.Add(this.cboMonth);
             this.Controls.Add(this.cboYear);
-            this.Controls.Add(this.cboVenue);
+            this.Controls.Add(this.cboVenues);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdminVenueAnalysis";
             this.Text = "frmAdminVenueAnalysis";
@@ -313,7 +316,7 @@
         private System.Windows.Forms.TextBox txtNoEvents;
         private System.Windows.Forms.ComboBox cboMonth;
         private System.Windows.Forms.ComboBox cboYear;
-        private System.Windows.Forms.ComboBox cboVenue;
+        private System.Windows.Forms.ComboBox cboVenues;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

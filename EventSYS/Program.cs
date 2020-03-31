@@ -13,7 +13,7 @@ namespace EventSYS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAdminRevenueAnalysis());
+            Application.Run(new frmMenu());
         }
 
         public static bool IsInDesignMode()

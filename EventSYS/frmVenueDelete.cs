@@ -56,21 +56,19 @@ namespace EventSYS
         {
             DataSet ds = new DataSet();
             ds = Venue.getActiveVenues();
-            // check that there are venues to delete
-            if (ds.Tables["av"].Rows.Count == 0)
-            {
-                cboVenues.SelectedIndex = -1;
-                cboVenues.Items.Clear();
-                cboVenues.Text = "No Venues";
-                return;
-            }
 
+            cboVenues.Items.Clear();
             //load combo box
             for (int i = 0; i < ds.Tables["av"].Rows.Count; i++)
             {
-                cboVenues.Items.Add(ds.Tables[0].Rows[i][0].ToString().PadLeft(3, '0') + " " + ds.Tables[0].Rows[i][1].ToString());
+
+                cboVenues.Items.Add(ds.Tables[0].Rows[i][1].ToString());
+
+
             }
         }
+            
+        
 
         private void cboVenues_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -81,7 +79,7 @@ namespace EventSYS
 
             Venue aVenue = new Venue();
 
-            aVenue.getAVenue(Convert.ToInt32(cboVenues.Text.Substring(0, 3))); //change in db to 2
+            aVenue.getAVenue(Venue.getIDFromName(cboVenues.Text));
 
             txtID.Text = aVenue.getVenueID().ToString();
             txtName.Text = aVenue.getVenueName().ToString();
