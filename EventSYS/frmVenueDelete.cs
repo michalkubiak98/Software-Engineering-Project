@@ -14,15 +14,12 @@ namespace EventSYS
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
         private bool _dragging = false;
-
         private Point _start_point = new Point(0, 0);
-
         private void frmVenueDelete_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void frmVenueDelete_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -31,7 +28,6 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void frmVenueDelete_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
@@ -44,7 +40,6 @@ namespace EventSYS
             //https://stackoverflow.com/questions/49424788/how-to-set-max-length-for-bunifu-net-ui-framework-text-box
             grpBox.Paint += PaintBorderlessGroupBox;
         }
-
         public void PaintBorderlessGroupBox(object sender, PaintEventArgs p)
         {
             GroupBox box = (GroupBox)sender;
@@ -52,6 +47,7 @@ namespace EventSYS
             p.Graphics.DrawString(box.Text, box.Font, Brushes.White, 0, 0);
         }
 
+        //Reload Venues Combo
         public void loadVenues()
         {
             DataSet ds = new DataSet();
@@ -61,14 +57,9 @@ namespace EventSYS
             //load combo box
             for (int i = 0; i < ds.Tables["av"].Rows.Count; i++)
             {
-
                 cboVenues.Items.Add(ds.Tables[0].Rows[i][1].ToString());
-
-
             }
         }
-            
-        
 
         private void cboVenues_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -106,7 +97,7 @@ namespace EventSYS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
+            frmMenuAdmin parent = new frmMenuAdmin();
             this.Close();
             parent.Show();
             parent.Left = this.Left;

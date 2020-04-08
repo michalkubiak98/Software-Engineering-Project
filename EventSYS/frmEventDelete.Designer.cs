@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventDelete));
             this.lblEventSelect = new System.Windows.Forms.Label();
             this.grpBox = new System.Windows.Forms.GroupBox();
+            this.lblEu = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtTickets = new System.Windows.Forms.TextBox();
             this.txtTime = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.cboEvents = new System.Windows.Forms.ComboBox();
-            this.lblEu = new System.Windows.Forms.Label();
             this.grpBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,18 @@
             this.grpBox.TabIndex = 174;
             this.grpBox.TabStop = false;
             this.grpBox.Text = "Details";
+            // 
+            // lblEu
+            // 
+            this.lblEu.AutoSize = true;
+            this.lblEu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEu.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
+            this.lblEu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblEu.Location = new System.Drawing.Point(233, 335);
+            this.lblEu.Name = "lblEu";
+            this.lblEu.Size = new System.Drawing.Size(35, 16);
+            this.lblEu.TabIndex = 183;
+            this.lblEu.Text = "Euro";
             // 
             // txtPrice
             // 
@@ -174,20 +186,20 @@
             // 
             this.btnConfirm.ActiveBorderThickness = 1;
             this.btnConfirm.ActiveCornerRadius = 20;
-            this.btnConfirm.ActiveFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirm.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirm.ActiveLineColor = System.Drawing.Color.IndianRed;
             this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
-            this.btnConfirm.ButtonText = "Delete";
+            this.btnConfirm.ButtonText = "Cancel";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.SystemColors.Control;
             this.btnConfirm.IdleBorderThickness = 1;
             this.btnConfirm.IdleCornerRadius = 20;
-            this.btnConfirm.IdleFillColor = System.Drawing.Color.SeaGreen;
+            this.btnConfirm.IdleFillColor = System.Drawing.Color.Firebrick;
             this.btnConfirm.IdleForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnConfirm.IdleLineColor = System.Drawing.Color.Firebrick;
             this.btnConfirm.Location = new System.Drawing.Point(234, 363);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConfirm.Name = "btnConfirm";
@@ -360,18 +372,6 @@
             this.cboEvents.Size = new System.Drawing.Size(260, 21);
             this.cboEvents.TabIndex = 171;
             this.cboEvents.SelectedIndexChanged += new System.EventHandler(this.cboEvents_SelectedIndexChanged_1);
-            // 
-            // lblEu
-            // 
-            this.lblEu.AutoSize = true;
-            this.lblEu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEu.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
-            this.lblEu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblEu.Location = new System.Drawing.Point(233, 335);
-            this.lblEu.Name = "lblEu";
-            this.lblEu.Size = new System.Drawing.Size(35, 16);
-            this.lblEu.TabIndex = 183;
-            this.lblEu.Text = "Euro";
             // 
             // frmEventDelete
             // 

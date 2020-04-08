@@ -6,8 +6,7 @@ namespace EventSYS
 {
     public partial class frmVenueAdd : Form
     {
-        //Find out how to close the menu after hiding it without Application.Run crashing or making a new instance of the form
-
+        
         public frmVenueAdd()
         {
             InitializeComponent();
@@ -18,6 +17,7 @@ namespace EventSYS
             txtID.Text = Convert.ToString(Venue.getNextID());
             grdAddVenue.DataSource = Venue.getActiveVenuesMini().Tables["avm"];
 
+            //Set Max Length TextBoxes
             Utilities.BunifuMetro(txtName, 80);
             Utilities.BunifuMetro(txtStreet, 30);
             Utilities.BunifuMetro(txtTown, 30);
@@ -30,7 +30,7 @@ namespace EventSYS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
+            frmMenuAdmin parent = new frmMenuAdmin();
             this.Hide();
             parent.Show();
             parent.Left = this.Left;
@@ -49,15 +49,12 @@ namespace EventSYS
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
         private bool _dragging = false;
-
         private Point _start_point = new Point(0, 0);
-
         private void frmVenueAdd_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void frmVenueAdd_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -66,7 +63,6 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void frmVenueAdd_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
@@ -74,8 +70,8 @@ namespace EventSYS
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (txtManagerEmail.Text.Equals("") || txtName.Text.Equals("") || txtStreet.Text.Equals("") || txtTown.Text.Equals("") ||
-                txtCounty.Text.Equals("") || txtManagerName.Text.Equals("") || txtManagerMobile.Text.Equals("") || txtMaxCapacity.Text.Equals(""))
+            if (txtManagerEmail.Text == "" || txtName.Text == "" || txtStreet.Text == "" || txtTown.Text == "" ||
+                txtCounty.Text == "" || txtManagerName.Text == "" || txtManagerMobile.Text == "" || txtMaxCapacity.Text == "")
             {
                 MessageBox.Show("One or more fields have been left empty! Please enter all required details.", "Empty Field(s)", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -137,54 +133,41 @@ namespace EventSYS
             }
         }
 
+        //text Boxes Input restrictions
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
         }
-
         private void txtStreet_KeyPress(object sender, KeyPressEventArgs e)
         {
         }
-
         private void txtTown_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
         }
-
         private void txtCounty_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
         }
-
         private void txtMaxCapacity_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
-
         private void txtManagerName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
         }
-
         private void txtManagerEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
         }
-
         private void txtManagerMobile_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        private void btnExit_MouseHover(object sender, EventArgs e)
-        {
-        }
-
-        private void btnBack_MouseHover(object sender, EventArgs e)
-        {
-        }
     }
 }

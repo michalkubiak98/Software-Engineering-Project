@@ -14,15 +14,12 @@ namespace EventSYS
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
         private bool _dragging = false;
-
         private Point _start_point = new Point(0, 0);
-
         private void frmEventUpdate_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void frmEventUpdate_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -31,7 +28,6 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void frmEventUpdate_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
@@ -45,6 +41,8 @@ namespace EventSYS
             List<String> venues = Venue.fillVenueCombo();
             cboVenue.Items.AddRange(venues.ToArray());
 
+            //Max Length of the Bunifu Custom TextBoxes
+            //https://stackoverflow.com/questions/49424788/how-to-set-max-length-for-bunifu-net-ui-framework-text-box
             Utilities.BunifuMetro(txtTitle, 50);
             Utilities.BunifuMetro(txtDescription, 140);
             Utilities.BunifuMetro(txtTime, 5);
@@ -55,6 +53,8 @@ namespace EventSYS
             grpBox.Paint += PaintBorderlessGroupBox;
         }
 
+        //Group Box invisible on load
+        //https://social.msdn.microsoft.com/Forums/windows/en-US/60767912-6ea4-4ff6-acb5-44002bd94e82/how-to-change-border-color-of-groupbox-in-cnet?forum=winforms
         public void PaintBorderlessGroupBox(object sender, PaintEventArgs p)
         {
             GroupBox box = (GroupBox)sender;
@@ -64,7 +64,7 @@ namespace EventSYS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
+            frmMenuAdmin parent = new frmMenuAdmin();
             this.Close();
             parent.Show();
             parent.Left = this.Left;
@@ -83,8 +83,8 @@ namespace EventSYS
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (cboVenue.SelectedItem == null || txtTitle.Text.Equals("") || txtDescription.Text.Equals("") || txtTime.Text.Equals("") ||
-              txtTicketsAvailable.Text.Equals("") || txtPrice.Text.Equals(""))
+            if (cboVenue.SelectedItem == null || txtTitle.Text == "" || txtTime.Text == "" ||
+              txtTicketsAvailable.Text == "" || txtPrice.Text == "")
             {
                 MessageBox.Show("One or more fields have been left empty! Please enter all required details.", "Empty Field(s)", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -136,7 +136,39 @@ namespace EventSYS
             }
         }
 
-        private void grdUpdateEvent_CellClick(object sender, DataGridViewCellEventArgs e)
+        //TextBox input restrictions
+        private void txtTime_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //https://stackoverflow.com/questions/16050749/how-restrict-textbox-in-c-sharp-to-only-receive-numbers-and-dot-or-comma
+
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == ':' || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtTicketsAvailable_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == '.' || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        //Fetch Event Data from cell click
+        private void grdUpdateEvent_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             Event myEvent = new Event();
 
@@ -159,38 +191,6 @@ namespace EventSYS
             txtPrice.Text = Convert.ToString(myEvent.getPrice());
             lblSelect.Visible = false;
             grpBox.Visible = true;
-        }
-
-        private void txtTime_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //https://stackoverflow.com/questions/16050749/how-restrict-textbox-in-c-sharp-to-only-receive-numbers-and-dot-or-comma
-
-            if (char.IsDigit(e.KeyChar) || e.KeyChar == ':' || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtTicketsAvailable_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-                e.Handled = true;
-        }
-
-        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar) || e.KeyChar == '.' || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
         }
     }
 }

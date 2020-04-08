@@ -10,12 +10,11 @@ namespace EventSYS
         private String forename;
         private String surname;
         private String email;
-
-        //protect this with hash
         private String password;
-
         private String contactNo;
 
+
+        //Constructor
         public Customer(int custID, String forename, String surname, String email, String password, String contactNo)
         {
             setCustID(custID);
@@ -25,7 +24,6 @@ namespace EventSYS
             setPassword(password);
             setContactNo(contactNo);
         }
-
         public Customer()
         {
             setCustID(0);
@@ -40,27 +38,22 @@ namespace EventSYS
         {
             return custID;
         }
-
         public String getForename()
         {
             return forename;
         }
-
         public String getSurname()
         {
             return surname;
         }
-
         public String getEmail()
         {
             return email;
         }
-
         public String getPassword()
         {
             return password;
         }
-
         public String getContactNo()
         {
             return contactNo;
@@ -70,32 +63,28 @@ namespace EventSYS
         {
             this.custID = custID;
         }
-
         public void setForename(String forename)
         {
             this.forename = forename;
         }
-
         public void setSurname(String surname)
         {
             this.surname = surname;
         }
-
         public void setEmail(String email)
         {
             this.email = email;
         }
-
         public void setPassword(String password)
         {
             this.password = password;
         }
-
         public void setContactNo(String contactNo)
         {
             this.contactNo = contactNo;
         }
 
+        //Methods
         public void AddCustomer()
 
         {
@@ -168,12 +157,10 @@ namespace EventSYS
         public static DataSet getCustInfo(int id)
         {
             String strSQL = "Select * From Customers WHERE custID = '" + id + "'";
-
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataAdapter da = new OracleDataAdapter(cmd);
-
             DataSet ds = new DataSet();
             da.Fill(ds, "infoID");
             conn.Close();
@@ -183,12 +170,10 @@ namespace EventSYS
         public static DataSet getCustInfoFromEmail(String email)
         {
             String strSQL = "Select * From Customers WHERE Email = '" + email + "'";
-
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataAdapter da = new OracleDataAdapter(cmd);
-
             DataSet ds = new DataSet();
             da.Fill(ds, "infoEmail");
             conn.Close();
@@ -199,17 +184,14 @@ namespace EventSYS
         {
             Boolean answer = false;
             String strSQL = "Select * From Customers WHERE Email = '" + email + "'";
-
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
-
             if (dr.Read())
             {
                 answer = true;
             }
-
             conn.Close();
             return answer;
         }
@@ -218,32 +200,32 @@ namespace EventSYS
         {
             Boolean answer = false;
             String strSQL = "Select * From Customers WHERE Email = '" + email + "'" + "and Password = '" + pass + "'";
-
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
-
             if (dr.Read())
             {
                 answer = true;
             }
-
             conn.Close();
             return answer;
         }
 
         public static int getCustIDFromEmail(String email)
         {
-            String strSQL = "Select custID From Customers WHERE Email = '"+ email + "'";
-
+            String strSQL = "Select custID From Customers WHERE Email = '" + email + "'";
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
+            int id = 0;
+            if (dr.Read())
+            {
+                id = dr.GetInt32(0);
+            }
 
-            dr.Read();
-            return dr.GetInt32(0);
+            return id;
         }
     }
 }

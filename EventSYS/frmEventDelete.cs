@@ -42,8 +42,6 @@ namespace EventSYS
             loadEvents();
         }
 
-       
-
         public void loadEvents()
         {
             DataSet ds = new DataSet();
@@ -54,7 +52,6 @@ namespace EventSYS
             for (int i = 0; i < ds.Tables["ae"].Rows.Count; i++)
             {
                 cboEvents.Items.Add(ds.Tables[0].Rows[i][3].ToString());
-                
             }
         }
 
@@ -85,7 +82,7 @@ namespace EventSYS
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
+            frmMenuAdmin parent = new frmMenuAdmin();
             this.Close();
             parent.Show();
             parent.Left = this.Left;

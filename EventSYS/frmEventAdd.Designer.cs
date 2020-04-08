@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventAdd));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventAdd));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cboVenue = new System.Windows.Forms.ComboBox();
-            this.grdAddEvent = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txtPrice = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtDescription = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtTicketsAvailable = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -55,6 +56,7 @@
             this.lblHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.grdAddEvent = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddEvent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,36 +70,6 @@
             this.cboVenue.Size = new System.Drawing.Size(201, 21);
             this.cboVenue.TabIndex = 59;
             this.cboVenue.SelectedIndexChanged += new System.EventHandler(this.cboVenue_SelectedIndexChanged);
-            // 
-            // grdAddEvent
-            // 
-            this.grdAddEvent.AllowUserToAddRows = false;
-            this.grdAddEvent.AllowUserToDeleteRows = false;
-            this.grdAddEvent.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grdAddEvent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdAddEvent.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.grdAddEvent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grdAddEvent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAddEvent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grdAddEvent.ColumnHeadersHeight = 20;
-            this.grdAddEvent.DoubleBuffered = true;
-            this.grdAddEvent.EnableHeadersVisualStyles = false;
-            this.grdAddEvent.GridColor = System.Drawing.SystemColors.Control;
-            this.grdAddEvent.HeaderBgColor = System.Drawing.SystemColors.Control;
-            this.grdAddEvent.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.grdAddEvent.Location = new System.Drawing.Point(453, 66);
-            this.grdAddEvent.Name = "grdAddEvent";
-            this.grdAddEvent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grdAddEvent.Size = new System.Drawing.Size(612, 358);
-            this.grdAddEvent.TabIndex = 69;
             // 
             // txtPrice
             // 
@@ -113,7 +85,7 @@
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(59, 26);
-            this.txtPrice.TabIndex = 159;
+            this.txtPrice.TabIndex = 157;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
@@ -132,7 +104,7 @@
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(202, 64);
-            this.txtDescription.TabIndex = 158;
+            this.txtDescription.TabIndex = 154;
             this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTicketsAvailable
@@ -420,11 +392,71 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // grdAddEvent
+            // 
+            this.grdAddEvent.AllowUserToAddRows = false;
+            this.grdAddEvent.AllowUserToDeleteRows = false;
+            this.grdAddEvent.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAddEvent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdAddEvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdAddEvent.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdAddEvent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdAddEvent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grdAddEvent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAddEvent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grdAddEvent.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdAddEvent.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grdAddEvent.DoubleBuffered = true;
+            this.grdAddEvent.EnableHeadersVisualStyles = false;
+            this.grdAddEvent.GridColor = System.Drawing.SystemColors.Control;
+            this.grdAddEvent.HeaderBgColor = System.Drawing.Color.DimGray;
+            this.grdAddEvent.HeaderForeColor = System.Drawing.Color.White;
+            this.grdAddEvent.Location = new System.Drawing.Point(450, 66);
+            this.grdAddEvent.Name = "grdAddEvent";
+            this.grdAddEvent.ReadOnly = true;
+            this.grdAddEvent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAddEvent.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grdAddEvent.RowHeadersVisible = false;
+            this.grdAddEvent.RowTemplate.DividerHeight = 1;
+            this.grdAddEvent.RowTemplate.Height = 30;
+            this.grdAddEvent.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdAddEvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdAddEvent.Size = new System.Drawing.Size(607, 359);
+            this.grdAddEvent.TabIndex = 167;
+            // 
             // frmEventAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 503);
+            this.Controls.Add(this.grdAddEvent);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.bunifuSeparator1);
@@ -447,7 +479,6 @@
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblVenueName);
-            this.Controls.Add(this.grdAddEvent);
             this.Controls.Add(this.cboVenue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEventAdd";
@@ -464,7 +495,6 @@
 
         #endregion
         private System.Windows.Forms.ComboBox cboVenue;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid grdAddEvent;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtPrice;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtDescription;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtTicketsAvailable;
@@ -487,5 +517,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblHeader;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnExit;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid grdAddEvent;
     }
 }

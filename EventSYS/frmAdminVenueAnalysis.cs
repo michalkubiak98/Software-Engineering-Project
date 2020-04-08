@@ -7,7 +7,7 @@ namespace EventSYS
 {
     public partial class frmAdminVenueAnalysis : Form
     {
-        //home button
+        
 
         public frmAdminVenueAnalysis()
         {
@@ -15,16 +15,13 @@ namespace EventSYS
         }
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
-
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
-
         private void frmAdminVenueAnalysis_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void frmAdminVenueAnalysis_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -33,12 +30,12 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void frmAdminVenueAnalysis_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
 
+        
         private void frmAdminVenueAnalysis_Load(object sender, EventArgs e)
         {
             lblEvents.Visible = false;
@@ -64,10 +61,7 @@ namespace EventSYS
             {
                 cboVenues.Items.Add(ds.Tables[0].Rows[i][1].ToString());
             }
-
-
         }
-        
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
@@ -130,7 +124,7 @@ namespace EventSYS
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
+            frmMenuAdmin parent = new frmMenuAdmin();
             this.Close();
             parent.Show();
             parent.Left = this.Left;

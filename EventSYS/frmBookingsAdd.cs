@@ -13,15 +13,12 @@ namespace EventSYS
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
         private bool _dragging = false;
-
         private Point _start_point = new Point(0, 0);
-
         private void frmBookingsAdd_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void frmBookingsAdd_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -30,7 +27,6 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void frmBookingsAdd_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
@@ -76,25 +72,36 @@ namespace EventSYS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
-            this.Close();
-            parent.Show();
-            parent.Left = this.Left;
-            parent.Top = this.Top;
+            if (frmLogIn.admin)
+            {
+                frmMenuAdmin menu = new frmMenuAdmin();
+                menu.Show();
+                menu.Left = this.Left;
+                menu.Top = this.Top;
+                this.Close();
+            }
+            else
+            {
+                frmMenuCustomer menu = new frmMenuCustomer();
+                menu.Show();
+                menu.Left = this.Left;
+                menu.Top = this.Top;
+                this.Close();
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Confirm this information?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (txtEvent.Text.Equals(""))
+            if (txtEvent.Text == "")
             {
                 MessageBox.Show("Please select an event!", "Select Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
             }
 
-            if (txtEmail.Text.Equals(""))
+            if (txtEmail.Text == "")
             {
                 MessageBox.Show("One or more fields have been left empty! Please enter all required details.", "Empty Field(s)", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -123,7 +130,6 @@ namespace EventSYS
                             booking.setNoTickets(Convert.ToInt32(cboTickets.Text));
                             booking.setBookingTotal(Convert.ToDouble(txtTotal.Text));
                             booking.AddBooking();
-                            
 
                             MessageBox.Show("All Done!");
                             grdEvents.DataSource = Event.getActiveEventsMini().Tables["aem"];

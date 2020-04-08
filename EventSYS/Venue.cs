@@ -50,47 +50,38 @@ namespace EventSYS
         {
             return venueID;
         }
-
         public String getVenueName()
         {
             return venueName;
         }
-
         public String getStreet()
         {
             return street;
         }
-
         public String getTown()
         {
             return town;
         }
-
         public String getCounty()
         {
             return county;
         }
-
         public String getManagerName()
         {
             return managerName;
         }
-
         public String getManagerEmail()
         {
             return managerEmail;
         }
-
         public String getManagerMobile()
         {
             return managerMobile;
         }
-
         public char getStatus()
         {
             return status;
         }
-
         public int getMaxCapacity()
         {
             return maxCapacity;
@@ -100,51 +91,44 @@ namespace EventSYS
         {
             this.venueID = venueID;
         }
-
         public void setVenueName(String venueName)
         {
             this.venueName = venueName;
         }
-
         public void setStreet(String street)
         {
             this.street = street;
         }
-
         public void setTown(String town)
         {
             this.town = town;
         }
-
         public void setCounty(String county)
         {
             this.county = county;
         }
-
         public void setManagerName(String managerName)
         {
             this.managerName = managerName;
         }
-
         public void setManagerEmail(String managerEmail)
         {
             this.managerEmail = managerEmail;
         }
-
         public void setManagerMobile(String managerMobile)
         {
             this.managerMobile = managerMobile;
         }
-
         public void setStatus(char status)
         {
             this.status = status;
         }
-
         public void setMaxCapacity(int maxCapacity)
         {
             this.maxCapacity = maxCapacity;
         }
+
+
 
         public void AddVenue()
         {
@@ -198,7 +182,7 @@ namespace EventSYS
 
         public void CancelVenue()
         {
-            //CANCEL VENUE THEN CANCEL EVENTS WITH THIS VENUE ID
+            
 
             String strSQL = "UPDATE Venues SET status = :status WHERE VenueID = :VenueID";
 
@@ -214,6 +198,28 @@ namespace EventSYS
             cmd.Parameters.AddRange(parameters);
             cmd.ExecuteNonQuery();
             conn.Close();
+
+            //-------- Cancel all events witrh this venue ID
+
+            String strSQL2 = "UPDATE Events SET status = :status WHERE VenueID = :VenueID";
+
+            OracleConnection conn2 = new OracleConnection(DBConnect.oradb);
+            conn2.Open();
+            OracleCommand cmd2 = new OracleCommand(strSQL2, conn2);
+
+            OracleParameter[] parameters2 = new OracleParameter[] {
+                new OracleParameter("status", 'N'),
+                new OracleParameter("venueID", this.getVenueID())
+            };
+
+            cmd2.Parameters.AddRange(parameters2);
+            cmd2.ExecuteNonQuery();
+            conn2.Close();
+
+
+
+
+
         }
 
         public static int getNextID()

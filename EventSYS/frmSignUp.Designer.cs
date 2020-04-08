@@ -33,6 +33,7 @@
             this.chkTerms = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.lblContact = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.lblConfirmPassword = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -43,14 +44,13 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblSurname = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblForename = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnSignUp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSignUp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.lblHead = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pctBox = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +73,7 @@
             this.chkTerms.Location = new System.Drawing.Point(385, 379);
             this.chkTerms.Name = "chkTerms";
             this.chkTerms.Size = new System.Drawing.Size(13, 12);
-            this.chkTerms.TabIndex = 199;
+            this.chkTerms.TabIndex = 7;
             this.chkTerms.UseVisualStyleBackColor = true;
             // 
             // btnExit
@@ -105,8 +105,8 @@
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.lblSurname);
             this.panel1.Controls.Add(this.lblForename);
-            this.panel1.Controls.Add(this.btnSignUp);
             this.panel1.Controls.Add(this.btnLogIn);
+            this.panel1.Controls.Add(this.btnSignUp);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.txtSurname);
             this.panel1.Controls.Add(this.chkTerms);
@@ -120,6 +120,18 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(202, 56);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(61, 13);
+            this.bunifuSeparator1.TabIndex = 214;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
             // lblContact
             // 
             this.lblContact.AutoSize = true;
@@ -129,9 +141,9 @@
             this.lblContact.Location = new System.Drawing.Point(34, 343);
             this.lblContact.Margin = new System.Windows.Forms.Padding(0);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(69, 14);
+            this.lblContact.Size = new System.Drawing.Size(47, 14);
             this.lblContact.TabIndex = 213;
-            this.lblContact.Text = "Password";
+            this.lblContact.Text = "Mobile";
             this.lblContact.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtContact
@@ -139,10 +151,10 @@
             this.txtContact.BackColor = System.Drawing.SystemColors.Menu;
             this.txtContact.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContact.Location = new System.Drawing.Point(202, 337);
+            this.txtContact.MaxLength = 14;
             this.txtContact.Name = "txtContact";
-            this.txtContact.PasswordChar = '*';
             this.txtContact.Size = new System.Drawing.Size(196, 27);
-            this.txtContact.TabIndex = 212;
+            this.txtContact.TabIndex = 6;
             this.txtContact.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblConfirmPassword
@@ -192,10 +204,11 @@
             this.txtConfirmPassword.BackColor = System.Drawing.SystemColors.Menu;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.Location = new System.Drawing.Point(202, 293);
+            this.txtConfirmPassword.MaxLength = 8;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(196, 27);
-            this.txtConfirmPassword.TabIndex = 208;
+            this.txtConfirmPassword.TabIndex = 5;
             this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtEmail
@@ -203,9 +216,10 @@
             this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(202, 207);
+            this.txtEmail.MaxLength = 40;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(196, 27);
-            this.txtEmail.TabIndex = 206;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPassword
@@ -213,10 +227,11 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
             this.txtPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(202, 249);
+            this.txtPassword.MaxLength = 8;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(196, 27);
-            this.txtPassword.TabIndex = 207;
+            this.txtPassword.TabIndex = 4;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblSurname
@@ -247,48 +262,13 @@
             this.lblForename.Text = "Forename";
             this.lblForename.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnSignUp
-            // 
-            this.btnSignUp.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSignUp.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSignUp.BorderRadius = 7;
-            this.btnSignUp.ButtonText = "Log In";
-            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignUp.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSignUp.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSignUp.Iconimage = null;
-            this.btnSignUp.Iconimage_right = null;
-            this.btnSignUp.Iconimage_right_Selected = null;
-            this.btnSignUp.Iconimage_Selected = null;
-            this.btnSignUp.IconMarginLeft = 0;
-            this.btnSignUp.IconMarginRight = 0;
-            this.btnSignUp.IconRightVisible = true;
-            this.btnSignUp.IconRightZoom = 0D;
-            this.btnSignUp.IconVisible = true;
-            this.btnSignUp.IconZoom = 90D;
-            this.btnSignUp.IsTab = false;
-            this.btnSignUp.Location = new System.Drawing.Point(37, 479);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnSignUp.OnHovercolor = System.Drawing.SystemColors.Control;
-            this.btnSignUp.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnSignUp.selected = false;
-            this.btnSignUp.Size = new System.Drawing.Size(361, 30);
-            this.btnSignUp.TabIndex = 203;
-            this.btnSignUp.Text = "Log In";
-            this.btnSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSignUp.Textcolor = System.Drawing.Color.DimGray;
-            this.btnSignUp.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
             // btnLogIn
             // 
-            this.btnLogIn.Activecolor = System.Drawing.Color.SteelBlue;
-            this.btnLogIn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogIn.Activecolor = System.Drawing.SystemColors.Control;
+            this.btnLogIn.BackColor = System.Drawing.Color.Transparent;
             this.btnLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogIn.BorderRadius = 7;
-            this.btnLogIn.ButtonText = "Sign Up";
+            this.btnLogIn.ButtonText = "Log In";
             this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogIn.DisabledColor = System.Drawing.Color.Gray;
             this.btnLogIn.Iconcolor = System.Drawing.Color.Transparent;
@@ -303,40 +283,78 @@
             this.btnLogIn.IconVisible = true;
             this.btnLogIn.IconZoom = 90D;
             this.btnLogIn.IsTab = false;
-            this.btnLogIn.Location = new System.Drawing.Point(37, 441);
+            this.btnLogIn.Location = new System.Drawing.Point(37, 479);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Normalcolor = System.Drawing.Color.SteelBlue;
-            this.btnLogIn.OnHovercolor = System.Drawing.Color.CornflowerBlue;
-            this.btnLogIn.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogIn.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnLogIn.OnHovercolor = System.Drawing.SystemColors.Control;
+            this.btnLogIn.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnLogIn.selected = false;
-            this.btnLogIn.Size = new System.Drawing.Size(361, 32);
-            this.btnLogIn.TabIndex = 202;
-            this.btnLogIn.Text = "Sign Up";
+            this.btnLogIn.Size = new System.Drawing.Size(361, 30);
+            this.btnLogIn.TabIndex = 203;
+            this.btnLogIn.Text = "Log In";
             this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogIn.Textcolor = System.Drawing.Color.White;
+            this.btnLogIn.Textcolor = System.Drawing.Color.DimGray;
             this.btnLogIn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
+            // btnSignUp
+            // 
+            this.btnSignUp.Activecolor = System.Drawing.Color.SteelBlue;
+            this.btnSignUp.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSignUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSignUp.BorderRadius = 7;
+            this.btnSignUp.ButtonText = "Sign Up";
+            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignUp.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSignUp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSignUp.Iconimage = null;
+            this.btnSignUp.Iconimage_right = null;
+            this.btnSignUp.Iconimage_right_Selected = null;
+            this.btnSignUp.Iconimage_Selected = null;
+            this.btnSignUp.IconMarginLeft = 0;
+            this.btnSignUp.IconMarginRight = 0;
+            this.btnSignUp.IconRightVisible = true;
+            this.btnSignUp.IconRightZoom = 0D;
+            this.btnSignUp.IconVisible = true;
+            this.btnSignUp.IconZoom = 90D;
+            this.btnSignUp.IsTab = false;
+            this.btnSignUp.Location = new System.Drawing.Point(37, 441);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btnSignUp.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnSignUp.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSignUp.selected = false;
+            this.btnSignUp.Size = new System.Drawing.Size(361, 32);
+            this.btnSignUp.TabIndex = 202;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSignUp.Textcolor = System.Drawing.Color.White;
+            this.btnSignUp.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.SystemColors.Menu;
             this.txtName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(202, 123);
+            this.txtName.MaxLength = 20;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(196, 27);
-            this.txtName.TabIndex = 200;
+            this.txtName.TabIndex = 1;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // txtSurname
             // 
             this.txtSurname.BackColor = System.Drawing.SystemColors.Menu;
             this.txtSurname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.Location = new System.Drawing.Point(202, 165);
+            this.txtSurname.MaxLength = 20;
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.PasswordChar = '*';
             this.txtSurname.Size = new System.Drawing.Size(196, 27);
-            this.txtSurname.TabIndex = 201;
+            this.txtSurname.TabIndex = 2;
             this.txtSurname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
             // lblHead
             // 
@@ -370,18 +388,6 @@
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(202, 56);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(61, 13);
-            this.bunifuSeparator1.TabIndex = 214;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,7 +401,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSignUp";
             this.Text = "SignUp";
-
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox)).EndInit();
@@ -419,8 +424,8 @@
         private System.Windows.Forms.TextBox txtPassword;
         private Bunifu.Framework.UI.BunifuCustomLabel lblSurname;
         private Bunifu.Framework.UI.BunifuCustomLabel lblForename;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSignUp;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogIn;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSignUp;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private Bunifu.Framework.UI.BunifuCustomLabel lblHead;

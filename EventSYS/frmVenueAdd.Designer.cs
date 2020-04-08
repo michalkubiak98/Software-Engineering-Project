@@ -31,10 +31,11 @@ namespace EventSYS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVenueAdd));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVenueAdd));
-            this.grdAddVenue = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btnReset = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -59,38 +60,9 @@ namespace EventSYS
             this.lblStreet = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtManagerMobile = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.grdAddVenue = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddVenue)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grdAddVenue
-            // 
-            this.grdAddVenue.AllowUserToAddRows = false;
-            this.grdAddVenue.AllowUserToDeleteRows = false;
-            this.grdAddVenue.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grdAddVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdAddVenue.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.grdAddVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grdAddVenue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAddVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grdAddVenue.ColumnHeadersHeight = 20;
-            this.grdAddVenue.DoubleBuffered = true;
-            this.grdAddVenue.EnableHeadersVisualStyles = false;
-            this.grdAddVenue.GridColor = System.Drawing.SystemColors.Control;
-            this.grdAddVenue.HeaderBgColor = System.Drawing.SystemColors.Control;
-            this.grdAddVenue.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.grdAddVenue.Location = new System.Drawing.Point(458, 66);
-            this.grdAddVenue.Name = "grdAddVenue";
-            this.grdAddVenue.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grdAddVenue.Size = new System.Drawing.Size(601, 356);
-            this.grdAddVenue.TabIndex = 33;
             // 
             // lblHeader
             // 
@@ -179,7 +151,6 @@ namespace EventSYS
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            this.btnBack.MouseHover += new System.EventHandler(this.btnBack_MouseHover);
             // 
             // btnExit
             // 
@@ -193,7 +164,6 @@ namespace EventSYS
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            this.btnExit.MouseHover += new System.EventHandler(this.btnExit_MouseHover);
             // 
             // txtTown
             // 
@@ -209,7 +179,7 @@ namespace EventSYS
             this.txtTown.Margin = new System.Windows.Forms.Padding(4);
             this.txtTown.Name = "txtTown";
             this.txtTown.Size = new System.Drawing.Size(202, 26);
-            this.txtTown.TabIndex = 138;
+            this.txtTown.TabIndex = 134;
             this.txtTown.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTown.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTown_KeyPress);
             // 
@@ -227,7 +197,7 @@ namespace EventSYS
             this.txtCounty.Margin = new System.Windows.Forms.Padding(4);
             this.txtCounty.Name = "txtCounty";
             this.txtCounty.Size = new System.Drawing.Size(202, 26);
-            this.txtCounty.TabIndex = 137;
+            this.txtCounty.TabIndex = 135;
             this.txtCounty.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCounty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCounty_KeyPress);
             // 
@@ -245,7 +215,7 @@ namespace EventSYS
             this.txtManagerEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtManagerEmail.Name = "txtManagerEmail";
             this.txtManagerEmail.Size = new System.Drawing.Size(202, 26);
-            this.txtManagerEmail.TabIndex = 136;
+            this.txtManagerEmail.TabIndex = 138;
             this.txtManagerEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtManagerEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtManagerEmail_KeyPress);
             // 
@@ -263,7 +233,7 @@ namespace EventSYS
             this.txtManagerName.Margin = new System.Windows.Forms.Padding(4);
             this.txtManagerName.Name = "txtManagerName";
             this.txtManagerName.Size = new System.Drawing.Size(202, 26);
-            this.txtManagerName.TabIndex = 135;
+            this.txtManagerName.TabIndex = 137;
             this.txtManagerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtManagerName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtManagerName_KeyPress);
             // 
@@ -281,7 +251,7 @@ namespace EventSYS
             this.txtMaxCapacity.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaxCapacity.Name = "txtMaxCapacity";
             this.txtMaxCapacity.Size = new System.Drawing.Size(56, 26);
-            this.txtMaxCapacity.TabIndex = 134;
+            this.txtMaxCapacity.TabIndex = 136;
             this.txtMaxCapacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaxCapacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaxCapacity_KeyPress);
             // 
@@ -456,12 +426,72 @@ namespace EventSYS
             this.txtManagerMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtManagerMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtManagerMobile_KeyPress);
             // 
+            // grdAddVenue
+            // 
+            this.grdAddVenue.AllowUserToAddRows = false;
+            this.grdAddVenue.AllowUserToDeleteRows = false;
+            this.grdAddVenue.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAddVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdAddVenue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdAddVenue.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdAddVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdAddVenue.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grdAddVenue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAddVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grdAddVenue.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdAddVenue.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grdAddVenue.DoubleBuffered = true;
+            this.grdAddVenue.EnableHeadersVisualStyles = false;
+            this.grdAddVenue.GridColor = System.Drawing.SystemColors.Control;
+            this.grdAddVenue.HeaderBgColor = System.Drawing.Color.DodgerBlue;
+            this.grdAddVenue.HeaderForeColor = System.Drawing.Color.White;
+            this.grdAddVenue.Location = new System.Drawing.Point(455, 71);
+            this.grdAddVenue.Name = "grdAddVenue";
+            this.grdAddVenue.ReadOnly = true;
+            this.grdAddVenue.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAddVenue.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grdAddVenue.RowHeadersVisible = false;
+            this.grdAddVenue.RowTemplate.DividerHeight = 1;
+            this.grdAddVenue.RowTemplate.Height = 30;
+            this.grdAddVenue.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdAddVenue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdAddVenue.Size = new System.Drawing.Size(613, 351);
+            this.grdAddVenue.TabIndex = 211;
+            // 
             // frmVenueAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1110, 503);
+            this.Controls.Add(this.grdAddVenue);
             this.Controls.Add(this.txtManagerMobile);
             this.Controls.Add(this.txtTown);
             this.Controls.Add(this.txtCounty);
@@ -474,7 +504,6 @@ namespace EventSYS
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lblHeader);
-            this.Controls.Add(this.grdAddVenue);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.label2);
@@ -508,7 +537,6 @@ namespace EventSYS
         #endregion
         private Button btnBack;
         private Button btnExit;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid grdAddVenue;
         private Bunifu.Framework.UI.BunifuCustomLabel lblHeader;
         private Bunifu.Framework.UI.BunifuThinButton2 btnConfirm;
         private Bunifu.Framework.UI.BunifuThinButton2 btnReset;
@@ -531,5 +559,6 @@ namespace EventSYS
         private Label lblStreet;
         private Label lblName;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtManagerMobile;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid grdAddVenue;
     }
 }

@@ -12,21 +12,18 @@ namespace EventSYS
         public frmAdminRevenueAnalysis()
         {
             InitializeComponent();
-
+            //Chart invisible on load
             cartesianChart1.Visible = false;
         }
 
-        //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
-
+        //Code to move the form around with drag - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
-
         private void frmAdminRevenueAnalysis_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void frmAdminRevenueAnalysis_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -35,7 +32,6 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void frmAdminRevenueAnalysis_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
@@ -53,14 +49,17 @@ namespace EventSYS
 
             //CAHRTS
 
+            //Months
             cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
             {
-                Title = "Month",
+                Title = "",
                 Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }
             });
 
+            //Legend ont he right
             cartesianChart1.LegendLocation = LegendLocation.Right;
-
+        
+            //Plots - Populated with methods from event class
             cartesianChart1.Series = new LiveCharts.SeriesCollection
             {
                 new LineSeries
@@ -68,7 +67,6 @@ namespace EventSYS
                 {
                     Values = new ChartValues<ObservablePoint>
                     {
-                       //Only pass in -MM- format
                        
                        new ObservablePoint(1, Event.TotalRevenueYear(year + "-01")),
                        new ObservablePoint(2, Event.TotalRevenueYear(year + "-02")),
@@ -93,7 +91,6 @@ namespace EventSYS
                 {
                     Values = new ChartValues<ObservablePoint>
                     {
-                       //Only pass in -MM- format
                        new ObservablePoint(1, Event.eventsYear(year + "-01")),
                        new ObservablePoint(2, Event.eventsYear(year + "-02")),
                        new ObservablePoint(3, Event.eventsYear(year + "-03")),
@@ -106,7 +103,6 @@ namespace EventSYS
                        new ObservablePoint(10, Event.eventsYear(year + "-10")),
                        new ObservablePoint(11, Event.eventsYear(year + "-11")),
                        new ObservablePoint(12, Event.eventsYear(year + "-12"))
-                    
                      },
 
                     PointGeometrySize = 10,
@@ -118,7 +114,7 @@ namespace EventSYS
                     Values = new ChartValues<ObservablePoint>
                     {
                        //Only pass in -MM- format
-                       
+
                        new ObservablePoint(1, Event.TicketsSoldYear(year + "-01")),
                        new ObservablePoint(2, Event.TicketsSoldYear(year + "-02")),
                        new ObservablePoint(3, Event.TicketsSoldYear(year + "-03")),
@@ -139,7 +135,9 @@ namespace EventSYS
             };
         }
 
-        private void button2_Click(object sender, EventArgs e)
+    
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -149,9 +147,9 @@ namespace EventSYS
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
+            frmMenuAdmin parent = new frmMenuAdmin();
             this.Close();
             parent.Show();
             parent.Left = this.Left;

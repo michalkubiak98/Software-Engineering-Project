@@ -12,22 +12,13 @@ namespace EventSYS
         }
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4 x
-
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
-
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            loadImage();
-        }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -36,18 +27,15 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
-
         private void pctBox_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void pctBox_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -56,24 +44,17 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void pctBox_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
 
-
-        private void btnExit_Click(object sender, EventArgs e)
+        //Image Timer - Slider https://www.youtube.com/watch?v=Ie09lhMEczU
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                Environment.Exit(0);
-            }
+            loadImage();
         }
         private int imageNumber = 1;
-
         private void loadImage()
         {
             if (imageNumber == 4)
@@ -85,12 +66,20 @@ namespace EventSYS
             imageNumber++;
         }
 
- 
-        
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Exit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (dialogResult == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+    
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            btnLogIn.Enabled = false;
+            this.Close();
             frmLogIn nextForm = new frmLogIn();
             nextForm.Show();
             nextForm.Left = this.Left;
@@ -99,7 +88,7 @@ namespace EventSYS
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (txtName.Text.Equals("") || txtPassword.Text.Equals("") || txtConfirmPassword.Text.Equals("") || txtEmail.Text.Equals("") || txtContact.Text.Equals(""))
+            if (txtName.Text == "" || txtSurname.Text == "" || txtPassword.Text == "" || txtConfirmPassword.Text == "" || txtEmail.Text == "" || txtContact.Text == "")
             {
                 MessageBox.Show("Fill Out All Details!");
                 txtName.Focus();
@@ -120,32 +109,23 @@ namespace EventSYS
             {
                 if (chkTerms.Checked)
                 {
-                    if (Customer.checkEmail(txtEmail.Text))
-                    {
-                        Customer cust = new Customer();
+                    Customer cust = new Customer();
+                    cust.setCustID(Customer.getNextID());
+                    cust.setForename(txtName.Text);
+                    cust.setSurname(txtSurname.Text);
+                    cust.setEmail(txtEmail.Text);
+                    cust.setPassword(txtPassword.Text);
+                    cust.setContactNo(txtContact.Text);
+                    cust.AddCustomer();
 
-                        cust.setCustID(Customer.getNextID());
-                        cust.setForename(txtName.Text);
-                        cust.setSurname(txtSurname.Text);
-                        cust.setEmail(txtEmail.Text);
-                        cust.setPassword(txtPassword.Text);
-                        cust.setContactNo(txtContact.Text);
+                    MessageBox.Show("Your account has been created! Proceeding to the log in page!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-                        cust.AddCustomer();
+                    this.Hide();
+                    frmLogIn nextForm = new frmLogIn();
 
-                        MessageBox.Show("Your account has been created! Proceeding to the log in page!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-                        this.Hide();
-                        frmLogIn nextForm = new frmLogIn();
-                        nextForm.Show();
-                        nextForm.Left = this.Left;
-                        nextForm.Top = this.Top;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Email Not Valid");
-                        return;
-                    }
+                    nextForm.Show();
+                    nextForm.Left = this.Left;
+                    nextForm.Top = this.Top;
                 }
                 else
                 {
@@ -161,6 +141,16 @@ namespace EventSYS
             }
         }
 
-
+        //Text restrictions
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
+        }
+        private void txtSurname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

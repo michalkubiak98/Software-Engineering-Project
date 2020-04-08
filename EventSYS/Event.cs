@@ -18,6 +18,7 @@ namespace EventSYS
         private double price;
         private char status;
 
+        //Constructor
         public Event(int eventID, int venueID, String venueName, String title, String description, String eventDate, String eventTime,
             int ticketsAvailable, double price, char status)
         {
@@ -51,47 +52,38 @@ namespace EventSYS
         {
             return eventID;
         }
-
         public int getVenueID()
         {
             return venueID;
         }
-
         public String getVenueName()
         {
             return venueName;
         }
-
         public String getTitle()
         {
             return title;
         }
-
         public String getDescription()
         {
             return description;
         }
-
         public String getEventDate()
         {
             return eventDate;
         }
-
         public String getEventTime()
         {
             return eventTime;
         }
-
         public int getTicketsAvailable()
         {
             return ticketsAvailable;
         }
-
         public double getPrice()
         {
             return price;
         }
-
         public char getStatus()
         {
             return status;
@@ -101,52 +93,45 @@ namespace EventSYS
         {
             this.eventID = eventID;
         }
-
         public void setVenueID(int venueID)
         {
             this.venueID = venueID;
         }
-
         public void setVenueName(String venueName)
         {
             this.venueName = venueName;
         }
-
         public void setTitle(String title)
         {
             this.title = title;
         }
-
         public void setDescription(String description)
         {
             this.description = description;
         }
-
         public void setEventDate(String eventDate)
         {
             this.eventDate = eventDate;
         }
-
         public void setEventTime(String eventTime)
         {
             this.eventTime = eventTime;
         }
-
         public void setTicketsAvailable(int ticketsAvailable)
         {
             this.ticketsAvailable = ticketsAvailable;
         }
-
         public void setPrice(double price)
         {
             this.price = price;
         }
-
         public void setStatus(char status)
         {
             this.status = status;
         }
 
+
+        //Methods
         public void AddEvent()
         {
             String sql = "INSERT INTO Events (eventID, venueID, venueName, title, description, eventDate, eventTime, ticketsAvailable, price, status) VALUES " + "(:eventID, :venueID, :venueName, :title, :description, :eventDate," + " :eventTime, :ticketsAvailable, :price, :status)";
@@ -318,7 +303,7 @@ namespace EventSYS
         public static DataSet getActiveEventsMini()
         {
             String strSQL = "Select EventID, VenueName, Title, Description, EventDate, EventTime, TicketsAvailable, Price From Events WHERE Status = 'Y' and  EventDate >= (Select TO_CHAR(SYSDATE, 'YYYY-MM-DD') from dual)";
-            
+
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
             OracleCommand cmd = new OracleCommand(strSQL, conn);
@@ -351,6 +336,7 @@ namespace EventSYS
             this.ticketsAvailable = dr.GetInt32(7);
             this.price = dr.GetDouble(8);
         }
+
         public static int getIDFromName(String name)
         {
             String strSQL = "SELECT EventID From Events WHERE title = '" + name + "'";
@@ -362,7 +348,6 @@ namespace EventSYS
             dr.Read();
             return dr.GetInt32(0);
         }
-
 
         public static Boolean checkEventTitle(String title, int venueID)
         {
@@ -466,13 +451,6 @@ namespace EventSYS
             return result;
         }
 
-
-
-
-
-
-
-
         public static String noEvents(String date, int id)
         {
             int result = 0;
@@ -543,7 +521,7 @@ namespace EventSYS
                 return Convert.ToString(result);
             }
         }
-
+        
         public static double TotalRevenueYear(String date)
         {
             double result = 0.00;
@@ -556,6 +534,7 @@ namespace EventSYS
             OracleDataReader dr = cmd.ExecuteReader();
             dr.Read();
 
+            //Could have returned a String saying no results
             if (dr.IsDBNull(0))
             {
                 return 0.00;
@@ -579,6 +558,8 @@ namespace EventSYS
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataReader dr = cmd.ExecuteReader();
             dr.Read();
+
+            //Could have returned a String saying no results
 
             if (dr.IsDBNull(0))
             {
@@ -604,6 +585,8 @@ namespace EventSYS
             OracleDataReader dr = cmd.ExecuteReader();
             dr.Read();
 
+
+            //Could have returned a String saying no results
             if (dr.IsDBNull(0))
             {
                 return 0;

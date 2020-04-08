@@ -13,7 +13,8 @@ namespace EventSYS
         private int noTickets;
         private double bookingTotal;
         private char status;
-
+        
+        //Constructor
         public Booking(int bookingID, int custID, int eventID, String bookingDate, int noTickets, double bookingTotal, char status)
         {
             setBookingID(bookingID);
@@ -24,7 +25,6 @@ namespace EventSYS
             setBookingTotal(bookingTotal);
             setStatus(status);
         }
-
         public Booking()
         {
             setBookingID(0);
@@ -40,32 +40,26 @@ namespace EventSYS
         {
             return bookingID;
         }
-
         public int getCustID()
         {
             return custID;
         }
-
         public int getEventID()
         {
             return eventID;
         }
-
         public String getBookingDate()
         {
             return bookingDate;
         }
-
         public int getNoTickets()
         {
             return noTickets;
         }
-
         public double getBookingTotal()
         {
             return bookingTotal;
         }
-
         public char getStatus()
         {
             return status;
@@ -75,37 +69,33 @@ namespace EventSYS
         {
             this.bookingID = bookingID;
         }
-
         public void setCustID(int custID)
         {
             this.custID = custID;
         }
-
         public void setEventID(int eventID)
         {
             this.eventID = eventID;
         }
-
         public void setBookingDate(String bookingDate)
         {
             this.bookingDate = bookingDate;
         }
-
         public void setNoTickets(int noTickets)
         {
             this.noTickets = noTickets;
         }
-
         public void setBookingTotal(double bookingTotal)
         {
             this.bookingTotal = bookingTotal;
         }
-
         public void setStatus(char status)
         {
             this.status = status;
         }
 
+
+        //Methods
         public void AddBooking()
         {
             int tickets = Event.getTickets(this.eventID);
@@ -124,7 +114,7 @@ namespace EventSYS
             cmd.Parameters.AddRange(parameters);
             cmd.ExecuteNonQuery();
             conn.Close();
-
+            
             //---------------------------------------------------------------------
 
             String sqll = "INSERT INTO Bookings (bookingID, custID, eventID, bookingDate, noTickets, bookingTotal, status) VALUES " + "(:bookingID, :custID, :eventID, :bookingDate, :noTickets, :bookingTotal, :status)";
@@ -134,21 +124,19 @@ namespace EventSYS
             OracleCommand cmdd = new OracleCommand(sqll, connn);
 
             OracleParameter[] parameterss = new OracleParameter[] {
-                new OracleParameter("bookingID",getBookingID()),
+                new OracleParameter("bookingID", getNextID()),
                 new OracleParameter("custID",getCustID()),
                 new OracleParameter("eventID",getEventID()),
                 new OracleParameter("bookingDate",getBookingDate()),
                 new OracleParameter("noTickets",getNoTickets()),
                  new OracleParameter("bookingTotal",getBookingTotal()),
-                new OracleParameter("status",getStatus())
+                new OracleParameter("status",'Y')
             };
 
             cmdd.Parameters.AddRange(parameterss);
             cmdd.ExecuteNonQuery();
             connn.Close();
         }
-
-
 
         public void CancelBooking()
         {
@@ -161,7 +149,7 @@ namespace EventSYS
             OracleCommand cmd = new OracleCommand(sql, conn);
 
             OracleParameter[] parameters = new OracleParameter[] {
-                new OracleParameter("ticketsAvailable",tickets + this.noTickets),
+                new OracleParameter("ticketsAvailable",tickets - this.noTickets),
                 new OracleParameter("eventID",getEventID())
             };
 
@@ -169,15 +157,16 @@ namespace EventSYS
             cmd.ExecuteNonQuery();
             conn.Close();
 
-            String sql2 = "UPDATE Bookings SET status = :status WHERE bookingID = :bookingID";
+            //-----------------------------------------------------------------------------------------
+
+            String sql2 = "UPDATE Bookings SET status = 'N' WHERE bookingID = :bookingID";
 
             OracleConnection conn2 = new OracleConnection(DBConnect.oradb);
             conn2.Open();
             OracleCommand cmd2 = new OracleCommand(sql2, conn2);
 
             OracleParameter[] parameters2 = new OracleParameter[] {
-                new OracleParameter("bookingID",getBookingID()),
-                new OracleParameter("status",'N')
+                new OracleParameter("bookingID",getBookingID())
             };
 
             cmd2.Parameters.AddRange(parameters2);
@@ -197,9 +186,13 @@ namespace EventSYS
             int nxt = 0;
             using (OracleDataReader reader = cmd.ExecuteReader())
             {
-                while (reader.Read())
+                try
                 {
                     nxt = reader.GetInt32(0) + 1;
+                }
+                catch
+                {
+                    nxt = 1;
                 }
             }
 
@@ -207,11 +200,9 @@ namespace EventSYS
             return nxt;
         }
 
-        
-
         public static DataSet getActiveBookings(int id)
         {
-            String strSQL = "Select Bookings.bookingID as ID, Events.Title, Venues.VenueName as Venue, Venues.Town, Events.EventDate, Events.EventTime as Time, Bookings.NoTickets as Tickets, Bookings.BookingTotal as Total  From Venues, Events, Bookings  where Venues.VenueID = Events.VenueID  and Events.EventID = Bookings.EventID and Bookings.bookingID = '" + id + "' and Bookings.Status = 'Y' and Events.Status = 'Y' and Venues.Status = 'Y'";
+            String strSQL = "Select Bookings.bookingID as ID, Events.Title, Venues.VenueName as Venue, Venues.Town, Events.EventDate, Events.EventTime as Time, Bookings.NoTickets as Tickets, Bookings.BookingTotal as Total  From Venues, Events, Bookings  where Venues.VenueID = Events.VenueID  and Events.EventID = Bookings.EventID and Bookings.CustID = '" + id + "' and Bookings.Status = 'Y' and Events.Status = 'Y' and Venues.Status = 'Y'";
 
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
@@ -223,8 +214,6 @@ namespace EventSYS
             conn.Close();
             return ds;
         }
-      
-
 
         public static int getIDfromEmail(String email)
         {
@@ -235,21 +224,10 @@ namespace EventSYS
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataAdapter da = new OracleDataAdapter(cmd);
 
-
-          
-            int id = 0;
-            using (OracleDataReader reader = cmd.ExecuteReader())
-            {
-
-                id = reader.GetInt32(0);
-                
-            }
-
-            conn.Close();
-            return id;
+            OracleDataReader dr = cmd.ExecuteReader();
+            dr.Read();
+            return dr.GetInt32(0);
         }
-
-
 
         public void getABooking(int id)
         {
@@ -269,14 +247,6 @@ namespace EventSYS
             this.bookingDate = dr.GetString(3);
             this.noTickets = dr.GetInt32(4);
             this.bookingTotal = dr.GetDouble(5);
-            this.status = dr.GetChar(6);
         }
-
-        
-
-
-
-
-
     }
 }

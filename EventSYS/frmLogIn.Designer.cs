@@ -38,7 +38,7 @@
             this.lblEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnSignUp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pctBox = new System.Windows.Forms.PictureBox();
@@ -51,6 +51,7 @@
             this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(129, 157);
+            this.txtEmail.MaxLength = 40;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(196, 27);
             this.txtEmail.TabIndex = 179;
@@ -61,6 +62,7 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
             this.txtPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(129, 199);
+            this.txtPassword.MaxLength = 8;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(196, 27);
@@ -88,7 +90,7 @@
             this.pnlSide.Controls.Add(this.lblEmail);
             this.pnlSide.Controls.Add(this.btnSignUp);
             this.pnlSide.Controls.Add(this.btnLogIn);
-            this.pnlSide.Controls.Add(this.button1);
+            this.pnlSide.Controls.Add(this.btnExit);
             this.pnlSide.Controls.Add(this.txtEmail);
             this.pnlSide.Controls.Add(this.txtPassword);
             this.pnlSide.Dock = System.Windows.Forms.DockStyle.Right;
@@ -196,22 +198,22 @@
             this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogIn.Textcolor = System.Drawing.Color.White;
             this.btnLogIn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click_1);
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = global::EventSYS.Properties.Resources.icon__1_;
-            this.button1.Location = new System.Drawing.Point(320, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 177;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Image = global::EventSYS.Properties.Resources.icon__1_;
+            this.btnExit.Location = new System.Drawing.Point(320, 4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(34, 34);
+            this.btnExit.TabIndex = 177;
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -269,7 +271,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtEmail;
         private Bunifu.Framework.UI.BunifuCustomLabel lblHead;
         private System.Windows.Forms.TextBox txtPassword;

@@ -8,7 +8,6 @@ namespace EventSYS
     internal class Utilities
     {
         //set length of textBoxes https://stackoverflow.com/questions/49424788/how-to-set-max-length-for-bunifu-net-ui-framework-text-box
-
         public static void BunifuMetro(BunifuMetroTextbox metroTextbox, int length)
         {
             foreach (var ctl in metroTextbox.Controls)
@@ -21,6 +20,7 @@ namespace EventSYS
             }
         }
 
+        //Email Valid
         public static bool IsValid(string emailaddress)
         {
             try

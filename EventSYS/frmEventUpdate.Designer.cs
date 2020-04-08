@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEventUpdate));
-            this.grdUpdateEvent = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.lblHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblEu = new System.Windows.Forms.Label();
@@ -57,40 +58,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblSelect = new Bunifu.Framework.UI.BunifuCustomLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.grdUpdateEvent)).BeginInit();
+            this.grdUpdateEvent = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.grpBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdUpdateEvent)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grdUpdateEvent
-            // 
-            this.grdUpdateEvent.AllowUserToAddRows = false;
-            this.grdUpdateEvent.AllowUserToDeleteRows = false;
-            this.grdUpdateEvent.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grdUpdateEvent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.grdUpdateEvent.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.grdUpdateEvent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grdUpdateEvent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdUpdateEvent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.grdUpdateEvent.ColumnHeadersHeight = 20;
-            this.grdUpdateEvent.DoubleBuffered = true;
-            this.grdUpdateEvent.EnableHeadersVisualStyles = false;
-            this.grdUpdateEvent.GridColor = System.Drawing.SystemColors.Control;
-            this.grdUpdateEvent.HeaderBgColor = System.Drawing.SystemColors.Control;
-            this.grdUpdateEvent.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.grdUpdateEvent.Location = new System.Drawing.Point(462, 100);
-            this.grdUpdateEvent.Name = "grdUpdateEvent";
-            this.grdUpdateEvent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grdUpdateEvent.Size = new System.Drawing.Size(594, 356);
-            this.grdUpdateEvent.TabIndex = 87;
-            this.grdUpdateEvent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdUpdateEvent_CellClick);
             // 
             // bunifuSeparator1
             // 
@@ -239,7 +210,7 @@
             this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
-            this.btnConfirm.ButtonText = "Confirm";
+            this.btnConfirm.ButtonText = "Update";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.SystemColors.Control;
@@ -396,7 +367,7 @@
             this.grpBox.Controls.Add(this.dtpDate);
             this.grpBox.Location = new System.Drawing.Point(51, 12);
             this.grpBox.Name = "grpBox";
-            this.grpBox.Size = new System.Drawing.Size(415, 479);
+            this.grpBox.Size = new System.Drawing.Size(405, 479);
             this.grpBox.TabIndex = 185;
             this.grpBox.TabStop = false;
             // 
@@ -457,22 +428,82 @@
             this.lblSelect.AutoSize = true;
             this.lblSelect.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelect.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblSelect.Location = new System.Drawing.Point(458, 46);
+            this.lblSelect.Location = new System.Drawing.Point(473, 46);
             this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(214, 21);
+            this.lblSelect.Size = new System.Drawing.Size(205, 21);
             this.lblSelect.TabIndex = 188;
-            this.lblSelect.Text = "Please select event to update!";
+            this.lblSelect.Text = "Please click event to update!";
+            // 
+            // grdUpdateEvent
+            // 
+            this.grdUpdateEvent.AllowUserToAddRows = false;
+            this.grdUpdateEvent.AllowUserToDeleteRows = false;
+            this.grdUpdateEvent.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdUpdateEvent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdUpdateEvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdUpdateEvent.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdUpdateEvent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdUpdateEvent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grdUpdateEvent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdUpdateEvent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grdUpdateEvent.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdUpdateEvent.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grdUpdateEvent.DoubleBuffered = true;
+            this.grdUpdateEvent.EnableHeadersVisualStyles = false;
+            this.grdUpdateEvent.GridColor = System.Drawing.SystemColors.Control;
+            this.grdUpdateEvent.HeaderBgColor = System.Drawing.Color.DimGray;
+            this.grdUpdateEvent.HeaderForeColor = System.Drawing.Color.White;
+            this.grdUpdateEvent.Location = new System.Drawing.Point(462, 86);
+            this.grdUpdateEvent.Name = "grdUpdateEvent";
+            this.grdUpdateEvent.ReadOnly = true;
+            this.grdUpdateEvent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdUpdateEvent.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grdUpdateEvent.RowHeadersVisible = false;
+            this.grdUpdateEvent.RowTemplate.DividerHeight = 1;
+            this.grdUpdateEvent.RowTemplate.Height = 30;
+            this.grdUpdateEvent.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdUpdateEvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdUpdateEvent.Size = new System.Drawing.Size(607, 359);
+            this.grdUpdateEvent.TabIndex = 190;
+            this.grdUpdateEvent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdUpdateEvent_CellClick_1);
             // 
             // frmEventUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 503);
+            this.Controls.Add(this.grdUpdateEvent);
             this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.grpBox);
-            this.Controls.Add(this.grdUpdateEvent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEventUpdate";
             this.Text = "frmEventUpdate";
@@ -480,16 +511,15 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmEventUpdate_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmEventUpdate_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmEventUpdate_MouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.grdUpdateEvent)).EndInit();
             this.grpBox.ResumeLayout(false);
             this.grpBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdUpdateEvent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuCustomDataGrid grdUpdateEvent;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblHeader;
         private System.Windows.Forms.Label lblEu;
@@ -515,5 +545,6 @@
         private System.Windows.Forms.Button btnExit;
         private Bunifu.Framework.UI.BunifuCustomLabel lblSelect;
         private Bunifu.Framework.UI.BunifuThinButton2 btnReset;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid grdUpdateEvent;
     }
 }

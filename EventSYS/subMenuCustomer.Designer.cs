@@ -99,7 +99,7 @@
             this.tab1.Location = new System.Drawing.Point(-8, 3);
             this.tab1.Name = "tab1";
             this.tab1.SelectedIndex = 0;
-            this.tab1.Size = new System.Drawing.Size(958, 642);
+            this.tab1.Size = new System.Drawing.Size(987, 665);
             this.tab1.TabIndex = 1;
             this.tab1.Tag = "";
             // 
@@ -113,7 +113,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(950, 616);
+            this.tabPage1.Size = new System.Drawing.Size(979, 639);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -152,14 +152,18 @@
             // lblDash
             // 
             this.lblDash.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
+            this.lblDash.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDash.AutoSize = true;
             this.lblDash.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDash.Location = new System.Drawing.Point(408, 229);
+            this.lblDash.Location = new System.Drawing.Point(406, 225);
             this.lblDash.Name = "lblDash";
             this.lblDash.Size = new System.Drawing.Size(145, 33);
             this.lblDash.TabIndex = 0;
             this.lblDash.Text = "Welcome!";
+            this.lblDash.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage2
             // 
@@ -174,7 +178,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(950, 616);
+            this.tabPage2.Size = new System.Drawing.Size(979, 639);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -344,7 +348,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(950, 616);
+            this.tabPage3.Size = new System.Drawing.Size(979, 639);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
@@ -513,7 +517,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(950, 616);
+            this.tabPage4.Size = new System.Drawing.Size(979, 639);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             // 
@@ -538,7 +542,7 @@
             this.btnMyBookings.IconVisible = false;
             this.btnMyBookings.IconZoom = 45D;
             this.btnMyBookings.IsTab = false;
-            this.btnMyBookings.Location = new System.Drawing.Point(5, 245);
+            this.btnMyBookings.Location = new System.Drawing.Point(5, 175);
             this.btnMyBookings.Name = "btnMyBookings";
             this.btnMyBookings.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnMyBookings.OnHovercolor = System.Drawing.SystemColors.ControlLight;
@@ -574,7 +578,7 @@
             this.btnMakeBooking.IconVisible = false;
             this.btnMakeBooking.IconZoom = 45D;
             this.btnMakeBooking.IsTab = false;
-            this.btnMakeBooking.Location = new System.Drawing.Point(5, 197);
+            this.btnMakeBooking.Location = new System.Drawing.Point(5, 127);
             this.btnMakeBooking.Name = "btnMakeBooking";
             this.btnMakeBooking.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnMakeBooking.OnHovercolor = System.Drawing.SystemColors.ControlLight;
@@ -646,7 +650,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(950, 616);
+            this.tabPage5.Size = new System.Drawing.Size(979, 639);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             // 
@@ -780,7 +784,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(950, 616);
+            this.tabPage6.Size = new System.Drawing.Size(979, 639);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             // 
@@ -942,7 +946,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(945, 29);
+            this.pnlTop.Size = new System.Drawing.Size(945, 33);
             this.pnlTop.TabIndex = 1;
             // 
             // subMenu

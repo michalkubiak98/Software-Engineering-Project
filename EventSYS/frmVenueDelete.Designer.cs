@@ -210,20 +210,20 @@
             // 
             this.btnConfirm.ActiveBorderThickness = 1;
             this.btnConfirm.ActiveCornerRadius = 20;
-            this.btnConfirm.ActiveFillColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirm.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnConfirm.ActiveLineColor = System.Drawing.Color.IndianRed;
             this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
-            this.btnConfirm.ButtonText = "Delete";
+            this.btnConfirm.ButtonText = "Cancel";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.SystemColors.Control;
             this.btnConfirm.IdleBorderThickness = 1;
             this.btnConfirm.IdleCornerRadius = 20;
-            this.btnConfirm.IdleFillColor = System.Drawing.Color.SeaGreen;
+            this.btnConfirm.IdleFillColor = System.Drawing.Color.Firebrick;
             this.btnConfirm.IdleForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnConfirm.IdleLineColor = System.Drawing.Color.Firebrick;
             this.btnConfirm.Location = new System.Drawing.Point(235, 417);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConfirm.Name = "btnConfirm";

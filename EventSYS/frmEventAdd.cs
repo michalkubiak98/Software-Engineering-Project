@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Globalization;
 using System.Windows.Forms;
 
 namespace EventSYS
@@ -30,15 +29,12 @@ namespace EventSYS
 
         //Code to move the form - take from https://www.youtube.com/watch?v=S2kzd7iZVm4
         private bool _dragging = false;
-
         private Point _start_point = new Point(0, 0);
-
         private void frmEventAdd_MouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
-
         private void frmEventAdd_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -47,7 +43,6 @@ namespace EventSYS
                 Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
             }
         }
-
         private void frmEventAdd_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
@@ -55,7 +50,7 @@ namespace EventSYS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmMenu parent = new frmMenu();
+            frmMenuAdmin parent = new frmMenuAdmin();
             this.Close();
             parent.Show();
             parent.Left = this.Left;
@@ -74,8 +69,8 @@ namespace EventSYS
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (cboVenue.SelectedItem == null || txtTitle.Text.Equals("") || txtDescription.Text.Equals("") ||
-             txtTicketsAvailable.Text.Equals("") || txtTime.Text.Equals("") || txtPrice.Text.Equals(""))
+            if (cboVenue.SelectedItem == null || txtTitle.Text == "" ||
+             txtTicketsAvailable.Text == "" || txtTime.Text == "" || txtPrice.Text == "")
             {
                 MessageBox.Show("One or more fields have been left empty! Please enter all required details.", "Empty Field(s)", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -90,14 +85,11 @@ namespace EventSYS
                     String name = Convert.ToString(cboVenue.SelectedItem);
                     Event myEvent = new Event();
 
-                   
-
                     DateTime dt1 = DateTime.Parse(dtpDate.Value.ToString("yyyy-MM-dd"));
                     DateTime dt2 = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd"));
 
                     if (dt1.Date >= dt2.Date)
                     {
-
                         myEvent.setEventID(Convert.ToInt32(txtID.Text));
                         myEvent.setVenueID(Venue.getIDFromName(name));
                         myEvent.setVenueName(name);
@@ -150,8 +142,6 @@ namespace EventSYS
                     {
                         MessageBox.Show("Event must be in the future!");
                     }
-
-
                 }
                 else
                 {
@@ -177,6 +167,8 @@ namespace EventSYS
             }
         }
 
+
+        //Key Press TextBox Restrictions for DB Insert Error Handling
         private void txtTime_KeyPress(object sender, KeyPressEventArgs e)
         {
             //https://stackoverflow.com/questions/16050749/how-restrict-textbox-in-c-sharp-to-only-receive-numbers-and-dot-or-comma
@@ -190,13 +182,11 @@ namespace EventSYS
                 e.Handled = true;
             }
         }
-
         private void txtTicketsAvailable_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
-
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar) || e.KeyChar == '.' || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space)
@@ -208,6 +198,7 @@ namespace EventSYS
                 e.Handled = true;
             }
         }
+
 
         private void cboVenue_SelectedIndexChanged(object sender, EventArgs e)
         {
