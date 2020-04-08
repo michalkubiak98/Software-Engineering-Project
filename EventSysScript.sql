@@ -106,16 +106,7 @@ CREATE TABLE Bookings (
   );
                                      
                                      
-INSERT INTO Events (EventID, VenueID, VenueName, Title, Description,  EventDate, EventTime, TicketsAvailable, Price)  
-VALUES(1, 1, 'Club', 'Party', 'Drinks and Dancing', '2020-10-20', '20:00', 1400, 25.00);
-INSERT INTO Events (EventID, VenueID, VenueName, Title, Description,  EventDate, EventTime, TicketsAvailable, Price)  
-VALUES(2, 2, 'Bar', 'Party', 'Darts', '2020-06-20', '18:00', 90, 35.00);
-INSERT INTO Events (EventID, VenueID, VenueName, Title, Description,  EventDate, EventTime, TicketsAvailable, Price)  
-VALUES(3, 3, 'Blasket Bar', 'Party', 'Bingo', '2020-08-20', '21:00', 400, 15.00);
-INSERT INTO Events (EventID, VenueID, VenueName, Title, Description,  EventDate, EventTime, TicketsAvailable, Price)  
-VALUES(4, 4, 'Hennesys', 'Party', 'Singing', '2020-10-10', '21:00', 240, 20.00);
 
-  
 
 INSERT INTO Bookings (BookingID, CustID, EventID, BookingDate, NoTickets, BookingTotal)  
 VALUES(1, 1, 1, '2020-04-08' , 3, 75.00);
