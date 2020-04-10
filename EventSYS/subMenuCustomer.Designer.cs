@@ -946,7 +946,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(945, 33);
+            this.pnlTop.Size = new System.Drawing.Size(945, 46);
             this.pnlTop.TabIndex = 1;
             // 
             // subMenu

@@ -107,7 +107,7 @@ namespace EventSYS
         private void btnMakeBooking_Click(object sender, EventArgs e)
         {
             btnMakeBooking.Enabled = false;
-            frmBookingsAdd nextForm = new frmBookingsAdd();
+            frmBookingsAddCustomer nextForm = new frmBookingsAddCustomer();
             nextForm.Show();
             nextForm.Left = ((Form)TopLevelControl).Left;
             nextForm.Top = ((Form)TopLevelControl).Top;

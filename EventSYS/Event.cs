@@ -505,6 +505,8 @@ namespace EventSYS
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
+
+            
             String strSQL = "SELECT SUM(BookingTotal) FROM Bookings B JOIN Events E ON B.EventID = E.EventID WHERE VenueID =" + id + " AND BOOKINGDATE LIKE '" + date + "%'";
 
             OracleCommand cmd = new OracleCommand(strSQL, conn);

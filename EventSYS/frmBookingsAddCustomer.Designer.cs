@@ -1,6 +1,6 @@
 ﻿namespace EventSYS
 {
-    partial class frmBookingsAdd
+    partial class frmBookingsAddCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookingsAdd));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookingsAddCustomer));
             this.cboTickets = new System.Windows.Forms.ComboBox();
             this.txtVenue = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
@@ -38,7 +38,6 @@
             this.grdEvents = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.lblHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnConfirm = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblTickets = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdEvents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,19 +99,19 @@
             this.grdEvents.AllowUserToAddRows = false;
             this.grdEvents.AllowUserToDeleteRows = false;
             this.grdEvents.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grdEvents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grdEvents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.grdEvents.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grdEvents.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdEvents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEvents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEvents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdEvents.ColumnHeadersHeight = 20;
             this.grdEvents.DoubleBuffered = true;
             this.grdEvents.EnableHeadersVisualStyles = false;
@@ -147,23 +147,6 @@
             this.lblHeader.Size = new System.Drawing.Size(145, 23);
             this.lblHeader.TabIndex = 182;
             this.lblHeader.Text = "Make a Booking";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderColorFocused = System.Drawing.Color.Gray;
-            this.txtEmail.BorderColorIdle = System.Drawing.Color.Gray;
-            this.txtEmail.BorderColorMouseHover = System.Drawing.Color.Gray;
-            this.txtEmail.BorderThickness = 1;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmail.isPassword = false;
-            this.txtEmail.Location = new System.Drawing.Point(212, 163);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(202, 26);
-            this.txtEmail.TabIndex = 175;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnConfirm
             // 
@@ -364,11 +347,21 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // frmBookingsAdd
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(212, 168);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(203, 23);
+            this.txtEmail.TabIndex = 194;
+            // 
+            // frmBookingsAddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 503);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtTotal);
@@ -381,7 +374,6 @@
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.lblEu);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblTickets);
@@ -394,7 +386,7 @@
             this.Controls.Add(this.txtVenue);
             this.Controls.Add(this.cboTickets);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmBookingsAdd";
+            this.Name = "frmBookingsAddCustomer";
             this.Text = "frmBookingsAdd";
             this.Load += new System.EventHandler(this.frmBookingsAdd_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmBookingsAdd_MouseDown);
@@ -414,7 +406,6 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid grdEvents;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblHeader;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtEmail;
         private Bunifu.Framework.UI.BunifuThinButton2 btnConfirm;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblTickets;
@@ -431,5 +422,6 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

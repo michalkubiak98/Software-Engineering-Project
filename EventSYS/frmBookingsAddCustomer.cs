@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace EventSYS
 {
-    public partial class frmBookingsAdd : Form
+    public partial class frmBookingsAddCustomer : Form
     {
-        public frmBookingsAdd()
+        public frmBookingsAddCustomer()
         {
             InitializeComponent();
         }
@@ -34,6 +34,9 @@ namespace EventSYS
 
         private void frmBookingsAdd_Load(object sender, EventArgs e)
         {
+            
+            txtEmail.Text = Customer.getEmailFromID(frmLogIn.CustomerID);
+
             txtID.Text = Convert.ToString(Booking.getNextID());
 
             grdEvents.DataSource = Event.getActiveEventsMini().Tables["aem"];
@@ -72,22 +75,12 @@ namespace EventSYS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (frmLogIn.admin)
-            {
-                frmMenuAdmin menu = new frmMenuAdmin();
-                menu.Show();
-                menu.Left = this.Left;
-                menu.Top = this.Top;
-                this.Close();
-            }
-            else
-            {
+            
                 frmMenuCustomer menu = new frmMenuCustomer();
                 menu.Show();
                 menu.Left = this.Left;
                 menu.Top = this.Top;
                 this.Close();
-            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

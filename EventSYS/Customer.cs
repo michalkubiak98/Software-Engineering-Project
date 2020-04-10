@@ -227,5 +227,23 @@ namespace EventSYS
 
             return id;
         }
+
+
+        public static String getEmailFromID(int id)
+        {
+            String strSQL = "Select Email From Customers WHERE CustID = '" + id + "'";
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+            OracleCommand cmd = new OracleCommand(strSQL, conn);
+            OracleDataReader dr = cmd.ExecuteReader();
+            String email = "";
+            if (dr.Read())
+            {
+                email = dr.GetString(0);
+            }
+
+            return email;
+        }
+
     }
 }

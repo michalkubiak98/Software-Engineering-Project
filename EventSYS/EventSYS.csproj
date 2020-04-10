@@ -119,11 +119,17 @@
     <Compile Include="frmAdminVenueAnalysis.Designer.cs">
       <DependentUpon>frmAdminVenueAnalysis.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBookingsAdd.cs">
+    <Compile Include="frmBookingAddAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBookingsAdd.Designer.cs">
-      <DependentUpon>frmBookingsAdd.cs</DependentUpon>
+    <Compile Include="frmBookingAddAdmin.Designer.cs">
+      <DependentUpon>frmBookingAddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookingsAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookingsAddCustomer.Designer.cs">
+      <DependentUpon>frmBookingsAddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBookingsMy.cs">
       <SubType>Form</SubType>
@@ -219,8 +225,11 @@
     <EmbeddedResource Include="frmAdminVenueAnalysis.resx">
       <DependentUpon>frmAdminVenueAnalysis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBookingsAdd.resx">
-      <DependentUpon>frmBookingsAdd.cs</DependentUpon>
+    <EmbeddedResource Include="frmBookingAddAdmin.resx">
+      <DependentUpon>frmBookingAddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookingsAddCustomer.resx">
+      <DependentUpon>frmBookingsAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBookingsMy.resx">
       <DependentUpon>frmBookingsMy.cs</DependentUpon>
