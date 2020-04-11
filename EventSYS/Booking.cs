@@ -13,7 +13,7 @@ namespace EventSYS
         private int noTickets;
         private double bookingTotal;
         private char status;
-        
+
         //Constructor
         public Booking(int bookingID, int custID, int eventID, String bookingDate, int noTickets, double bookingTotal, char status)
         {
@@ -114,7 +114,7 @@ namespace EventSYS
             cmd.Parameters.AddRange(parameters);
             cmd.ExecuteNonQuery();
             conn.Close();
-            
+
             //---------------------------------------------------------------------
 
             String sqll = "INSERT INTO Bookings (bookingID, custID, eventID, bookingDate, noTickets, bookingTotal, status) VALUES " + "(:bookingID, :custID, :eventID, :bookingDate, :noTickets, :bookingTotal, :status)";
