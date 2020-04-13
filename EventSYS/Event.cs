@@ -186,7 +186,7 @@ namespace EventSYS
 
         public void CancelEvent()
         {
-            String SQL = "DELETE * FROM BOOKINGS WHERE eventID = :eventID";
+            String SQL = "UPDATE BOOKINGS SET status = :status where EventID = :eventID";
 
             OracleConnection connn = new OracleConnection(DBConnect.oradb);
             connn.Open();
@@ -218,14 +218,14 @@ namespace EventSYS
 
         public void CancelEventID(int ID)
         {
-            String SQL = "DELETE * FROM BOOKINGS WHERE eventID = :eventID";
+            String SQL = "UPDATE BOOKINGS SET status = :status where EventID = '" + ID + "'";
 
             OracleConnection connn = new OracleConnection(DBConnect.oradb);
             connn.Open();
             OracleCommand cmdd = new OracleCommand(SQL, connn);
 
             OracleParameter[] parameterss = new OracleParameter[] {
-                new OracleParameter("eventID", ID)
+                new OracleParameter("status", "N")
             };
 
             cmdd.Parameters.AddRange(parameterss);
