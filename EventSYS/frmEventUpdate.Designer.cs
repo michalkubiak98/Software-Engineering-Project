@@ -100,7 +100,7 @@
             // 
             // dtpDate
             // 
-            this.dtpDate.BackColor = System.Drawing.SystemColors.Control;
+            this.dtpDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtpDate.BorderRadius = 0;
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.dtpDate.ForeColor = System.Drawing.Color.DimGray;
@@ -114,6 +114,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPrice.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtPrice.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtPrice.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -133,6 +134,7 @@
             // txtDescription
             // 
             this.txtDescription.AutoScroll = true;
+            this.txtDescription.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDescription.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtDescription.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtDescription.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -150,6 +152,7 @@
             // 
             // txtTicketsAvailable
             // 
+            this.txtTicketsAvailable.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTicketsAvailable.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtTicketsAvailable.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtTicketsAvailable.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -168,6 +171,7 @@
             // 
             // txtTime
             // 
+            this.txtTime.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTime.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtTime.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtTime.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -186,6 +190,7 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTitle.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtTitle.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtTitle.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -208,7 +213,7 @@
             this.btnConfirm.ActiveFillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
             this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.ButtonText = "Update";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -218,7 +223,7 @@
             this.btnConfirm.IdleCornerRadius = 20;
             this.btnConfirm.IdleFillColor = System.Drawing.Color.SeaGreen;
             this.btnConfirm.IdleForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnConfirm.IdleLineColor = System.Drawing.Color.Empty;
             this.btnConfirm.Location = new System.Drawing.Point(229, 424);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConfirm.Name = "btnConfirm";
@@ -229,6 +234,7 @@
             // 
             // txtID
             // 
+            this.txtID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(162, 88);
             this.txtID.Name = "txtID";
@@ -334,6 +340,7 @@
             // 
             // cboVenue
             // 
+            this.cboVenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cboVenue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboVenue.FormattingEnabled = true;
             this.cboVenue.ItemHeight = 13;
@@ -378,7 +385,7 @@
             this.btnReset.ActiveFillColor = System.Drawing.SystemColors.Control;
             this.btnReset.ActiveForecolor = System.Drawing.Color.DimGray;
             this.btnReset.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.btnReset.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReset.BackgroundImage")));
             this.btnReset.ButtonText = "Reset";
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -388,7 +395,7 @@
             this.btnReset.IdleCornerRadius = 20;
             this.btnReset.IdleFillColor = System.Drawing.SystemColors.Control;
             this.btnReset.IdleForecolor = System.Drawing.Color.DimGray;
-            this.btnReset.IdleLineColor = System.Drawing.Color.DimGray;
+            this.btnReset.IdleLineColor = System.Drawing.Color.Empty;
             this.btnReset.Location = new System.Drawing.Point(161, 424);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReset.Name = "btnReset";
@@ -447,7 +454,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdUpdateEvent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdUpdateEvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdUpdateEvent.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdUpdateEvent.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grdUpdateEvent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdUpdateEvent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdUpdateEvent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -498,6 +505,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1110, 503);
             this.Controls.Add(this.grdUpdateEvent);
             this.Controls.Add(this.lblSelect);

@@ -50,7 +50,7 @@ namespace EventSYS
             //CAHRTS
 
             //Months
-            cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
+            cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "",
                 Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" }

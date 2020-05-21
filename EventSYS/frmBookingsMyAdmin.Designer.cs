@@ -137,7 +137,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdBooking.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdBooking.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdBooking.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdBooking.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grdBooking.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdBooking.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdBooking.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -241,7 +241,7 @@
             this.btnCancel.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.btnCancel.ActiveForecolor = System.Drawing.SystemColors.Control;
             this.btnCancel.ActiveLineColor = System.Drawing.Color.IndianRed;
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.ButtonText = "Cancel Booking";
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -280,7 +280,7 @@
             this.btnConfirm.ActiveFillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
             this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.ButtonText = "Show Customer Bookings";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -313,6 +313,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtEmail.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtEmail.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtEmail.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -332,6 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(960, 559);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);

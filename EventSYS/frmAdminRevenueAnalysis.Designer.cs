@@ -1,4 +1,8 @@
-﻿namespace EventSYS
+﻿using LiveCharts; //Core of the library
+using LiveCharts.Wpf; //The WPF controls
+using LiveCharts.WinForms; //the WinForm wrappers
+
+namespace EventSYS
 {
     partial class frmAdminRevenueAnalysis
     {
@@ -62,7 +66,7 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::EventSYS.Properties.Resources.icon__1___1_1;
-            this.btnExit.Location = new System.Drawing.Point(672, 12);
+            this.btnExit.Location = new System.Drawing.Point(709, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(34, 34);
             this.btnExit.TabIndex = 216;
@@ -76,7 +80,7 @@
             this.lblRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRevenue.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
             this.lblRevenue.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblRevenue.Location = new System.Drawing.Point(472, 126);
+            this.lblRevenue.Location = new System.Drawing.Point(443, 129);
             this.lblRevenue.Name = "lblRevenue";
             this.lblRevenue.Size = new System.Drawing.Size(98, 16);
             this.lblRevenue.TabIndex = 213;
@@ -88,7 +92,7 @@
             this.lblSold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSold.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
             this.lblSold.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblSold.Location = new System.Drawing.Point(471, 103);
+            this.lblSold.Location = new System.Drawing.Point(442, 106);
             this.lblSold.Name = "lblSold";
             this.lblSold.Size = new System.Drawing.Size(77, 16);
             this.lblSold.TabIndex = 212;
@@ -112,7 +116,7 @@
             this.lblEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEvents.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
             this.lblEvents.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblEvents.Location = new System.Drawing.Point(471, 78);
+            this.lblEvents.Location = new System.Drawing.Point(442, 81);
             this.lblEvents.Name = "lblEvents";
             this.lblEvents.Size = new System.Drawing.Size(86, 16);
             this.lblEvents.TabIndex = 210;
@@ -155,30 +159,34 @@
             // 
             // txtRevenue
             // 
-            this.txtRevenue.Location = new System.Drawing.Point(570, 125);
+            this.txtRevenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtRevenue.Location = new System.Drawing.Point(600, 125);
             this.txtRevenue.Name = "txtRevenue";
             this.txtRevenue.ReadOnly = true;
-            this.txtRevenue.Size = new System.Drawing.Size(76, 20);
+            this.txtRevenue.Size = new System.Drawing.Size(46, 20);
             this.txtRevenue.TabIndex = 204;
             // 
             // txtNoTicketsSold
             // 
-            this.txtNoTicketsSold.Location = new System.Drawing.Point(570, 99);
+            this.txtNoTicketsSold.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtNoTicketsSold.Location = new System.Drawing.Point(600, 99);
             this.txtNoTicketsSold.Name = "txtNoTicketsSold";
             this.txtNoTicketsSold.ReadOnly = true;
-            this.txtNoTicketsSold.Size = new System.Drawing.Size(76, 20);
+            this.txtNoTicketsSold.Size = new System.Drawing.Size(46, 20);
             this.txtNoTicketsSold.TabIndex = 203;
             // 
             // txtNoEvents
             // 
-            this.txtNoEvents.Location = new System.Drawing.Point(570, 73);
+            this.txtNoEvents.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtNoEvents.Location = new System.Drawing.Point(600, 73);
             this.txtNoEvents.Name = "txtNoEvents";
             this.txtNoEvents.ReadOnly = true;
-            this.txtNoEvents.Size = new System.Drawing.Size(76, 20);
+            this.txtNoEvents.Size = new System.Drawing.Size(46, 20);
             this.txtNoEvents.TabIndex = 202;
             // 
             // cboYear
             // 
+            this.cboYear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboYear.FormattingEnabled = true;
             this.cboYear.Items.AddRange(new object[] {
@@ -203,7 +211,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 687);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(755, 687);
             this.Controls.Add(this.cartesianChart1);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnExit);

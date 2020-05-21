@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookingAddAdmin));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -63,7 +63,6 @@
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(210, 168);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(203, 23);
             this.txtEmail.TabIndex = 218;
             // 
@@ -95,6 +94,7 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTotal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.Location = new System.Drawing.Point(210, 378);
             this.txtTotal.Name = "txtTotal";
@@ -140,6 +140,7 @@
             // 
             // txtEventID
             // 
+            this.txtEventID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtEventID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventID.Location = new System.Drawing.Point(210, 133);
             this.txtEventID.Name = "txtEventID";
@@ -213,7 +214,7 @@
             this.btnConfirm.ActiveFillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
             this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.ButtonText = "Confirm";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -234,6 +235,7 @@
             // 
             // txtID
             // 
+            this.txtID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(210, 100);
             this.txtID.Name = "txtID";
@@ -294,19 +296,19 @@
             this.grdEvents.AllowUserToAddRows = false;
             this.grdEvents.AllowUserToDeleteRows = false;
             this.grdEvents.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grdEvents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.grdEvents.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grdEvents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdEvents.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grdEvents.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdEvents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEvents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEvents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdEvents.ColumnHeadersHeight = 20;
             this.grdEvents.DoubleBuffered = true;
             this.grdEvents.EnableHeadersVisualStyles = false;
@@ -322,6 +324,7 @@
             // 
             // txtEvent
             // 
+            this.txtEvent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtEvent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEvent.Location = new System.Drawing.Point(211, 259);
             this.txtEvent.Name = "txtEvent";
@@ -331,6 +334,7 @@
             // 
             // txtDate
             // 
+            this.txtDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDate.Location = new System.Drawing.Point(211, 317);
             this.txtDate.Name = "txtDate";
@@ -340,6 +344,7 @@
             // 
             // txtVenue
             // 
+            this.txtVenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtVenue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVenue.Location = new System.Drawing.Point(211, 288);
             this.txtVenue.Name = "txtVenue";
@@ -360,6 +365,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1110, 503);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnBack);

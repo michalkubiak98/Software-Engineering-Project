@@ -105,7 +105,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.lblDashDesc);
             this.tabPage1.Controls.Add(this.picDashboard);
@@ -167,7 +167,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage2.Controls.Add(this.btnCancelVenue);
             this.tabPage2.Controls.Add(this.btnUpdateVenue);
             this.tabPage2.Controls.Add(this.btnAddVenue);
@@ -185,7 +185,7 @@
             // btnCancelVenue
             // 
             this.btnCancelVenue.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnCancelVenue.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelVenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelVenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelVenue.BorderRadius = 0;
             this.btnCancelVenue.ButtonText = "         Cancel Venue";
@@ -221,7 +221,7 @@
             // btnUpdateVenue
             // 
             this.btnUpdateVenue.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnUpdateVenue.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdateVenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUpdateVenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUpdateVenue.BorderRadius = 0;
             this.btnUpdateVenue.ButtonText = "         Update Venue";
@@ -257,7 +257,7 @@
             // btnAddVenue
             // 
             this.btnAddVenue.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnAddVenue.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddVenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddVenue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddVenue.BorderRadius = 0;
             this.btnAddVenue.ButtonText = "         Add Venue";
@@ -337,7 +337,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage3.Controls.Add(this.btnCancelEvent);
             this.tabPage3.Controls.Add(this.btnUpdateEvent);
             this.tabPage3.Controls.Add(this.btnAddEvent);
@@ -355,7 +355,7 @@
             // btnCancelEvent
             // 
             this.btnCancelEvent.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnCancelEvent.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelEvent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelEvent.BorderRadius = 0;
             this.btnCancelEvent.ButtonText = "         Cancel Event";
@@ -391,7 +391,7 @@
             // btnUpdateEvent
             // 
             this.btnUpdateEvent.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnUpdateEvent.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdateEvent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUpdateEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUpdateEvent.BorderRadius = 0;
             this.btnUpdateEvent.ButtonText = "         Update Event";
@@ -427,7 +427,7 @@
             // btnAddEvent
             // 
             this.btnAddEvent.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnAddEvent.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddEvent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddEvent.BorderRadius = 0;
             this.btnAddEvent.ButtonText = "         Add Event";
@@ -507,7 +507,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage4.Controls.Add(this.btnMyBookings);
             this.tabPage4.Controls.Add(this.btnMakeBooking);
             this.tabPage4.Controls.Add(this.bunifuSeparator3);
@@ -524,7 +524,7 @@
             // btnMyBookings
             // 
             this.btnMyBookings.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnMyBookings.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMyBookings.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMyBookings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMyBookings.BorderRadius = 0;
             this.btnMyBookings.ButtonText = "         My Bookings";
@@ -560,7 +560,7 @@
             // btnMakeBooking
             // 
             this.btnMakeBooking.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnMakeBooking.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMakeBooking.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMakeBooking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMakeBooking.BorderRadius = 0;
             this.btnMakeBooking.ButtonText = "         Make a Booking";
@@ -640,7 +640,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage5.Controls.Add(this.btnRevenueAnalysis);
             this.tabPage5.Controls.Add(this.btnVenueAnalysis);
             this.tabPage5.Controls.Add(this.bunifuSeparator4);
@@ -657,7 +657,7 @@
             // btnRevenueAnalysis
             // 
             this.btnRevenueAnalysis.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnRevenueAnalysis.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRevenueAnalysis.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRevenueAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRevenueAnalysis.BorderRadius = 0;
             this.btnRevenueAnalysis.ButtonText = "         Revenue Analysis";
@@ -693,7 +693,7 @@
             // btnVenueAnalysis
             // 
             this.btnVenueAnalysis.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnVenueAnalysis.BackColor = System.Drawing.SystemColors.Control;
+            this.btnVenueAnalysis.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnVenueAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVenueAnalysis.BorderRadius = 0;
             this.btnVenueAnalysis.ButtonText = "         Venue Analysis";
@@ -773,7 +773,7 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage6.Controls.Add(this.btnPaymentMethod);
             this.tabPage6.Controls.Add(this.btnTheme);
             this.tabPage6.Controls.Add(this.btnAccount);
@@ -791,7 +791,7 @@
             // btnPaymentMethod
             // 
             this.btnPaymentMethod.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnPaymentMethod.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPaymentMethod.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPaymentMethod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPaymentMethod.BorderRadius = 0;
             this.btnPaymentMethod.ButtonText = "         Payment Method";
@@ -827,7 +827,7 @@
             // btnTheme
             // 
             this.btnTheme.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnTheme.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTheme.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTheme.BorderRadius = 0;
             this.btnTheme.ButtonText = "         Theme";
@@ -863,7 +863,7 @@
             // btnAccount
             // 
             this.btnAccount.Activecolor = System.Drawing.SystemColors.Control;
-            this.btnAccount.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAccount.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccount.BorderRadius = 0;
             this.btnAccount.ButtonText = "         Settings";
@@ -943,10 +943,11 @@
             // 
             // pnlTop
             // 
+            this.pnlTop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(945, 46);
+            this.pnlTop.Size = new System.Drawing.Size(945, 55);
             this.pnlTop.TabIndex = 1;
             // 
             // subMenu

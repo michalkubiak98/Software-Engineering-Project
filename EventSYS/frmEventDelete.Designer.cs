@@ -71,7 +71,7 @@
             // 
             // grpBox
             // 
-            this.grpBox.BackColor = System.Drawing.SystemColors.Control;
+            this.grpBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grpBox.Controls.Add(this.lblEu);
             this.grpBox.Controls.Add(this.txtPrice);
             this.grpBox.Controls.Add(this.txtTickets);
@@ -114,6 +114,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPrice.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtPrice.Location = new System.Drawing.Point(168, 327);
@@ -124,6 +125,7 @@
             // 
             // txtTickets
             // 
+            this.txtTickets.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTickets.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTickets.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtTickets.Location = new System.Drawing.Point(168, 291);
@@ -134,6 +136,7 @@
             // 
             // txtTime
             // 
+            this.txtTime.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTime.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTime.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtTime.Location = new System.Drawing.Point(168, 254);
@@ -144,6 +147,7 @@
             // 
             // txtDate
             // 
+            this.txtDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDate.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtDate.Location = new System.Drawing.Point(168, 216);
@@ -154,6 +158,7 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtDescription.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtDescription.Location = new System.Drawing.Point(168, 185);
@@ -164,6 +169,7 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTitle.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtTitle.Location = new System.Drawing.Point(168, 147);
@@ -174,6 +180,7 @@
             // 
             // txtVenue
             // 
+            this.txtVenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtVenue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVenue.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtVenue.Location = new System.Drawing.Point(168, 113);
@@ -189,7 +196,7 @@
             this.btnConfirm.ActiveFillColor = System.Drawing.Color.IndianRed;
             this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
             this.btnConfirm.ActiveLineColor = System.Drawing.Color.IndianRed;
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.ButtonText = "Cancel";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -318,6 +325,7 @@
             // 
             // txtID
             // 
+            this.txtID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtID.Location = new System.Drawing.Point(168, 81);
@@ -365,6 +373,7 @@
             // 
             // cboEvents
             // 
+            this.cboEvents.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cboEvents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEvents.FormattingEnabled = true;
             this.cboEvents.Location = new System.Drawing.Point(149, 68);
@@ -377,6 +386,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(480, 535);
             this.Controls.Add(this.lblEventSelect);
             this.Controls.Add(this.grpBox);

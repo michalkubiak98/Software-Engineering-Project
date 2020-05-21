@@ -48,7 +48,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(129, 157);
             this.txtEmail.MaxLength = 40;
@@ -59,7 +59,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(129, 199);
             this.txtPassword.MaxLength = 8;
@@ -85,7 +85,7 @@
             // 
             // pnlSide
             // 
-            this.pnlSide.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlSide.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlSide.Controls.Add(this.bunifuCustomLabel2);
             this.pnlSide.Controls.Add(this.lblEmail);
             this.pnlSide.Controls.Add(this.btnSignUp);

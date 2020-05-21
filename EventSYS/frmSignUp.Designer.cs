@@ -78,7 +78,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
@@ -93,6 +93,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.bunifuSeparator1);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.lblContact);
@@ -148,7 +149,7 @@
             // 
             // txtContact
             // 
-            this.txtContact.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtContact.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtContact.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContact.Location = new System.Drawing.Point(202, 337);
             this.txtContact.MaxLength = 14;
@@ -201,7 +202,7 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtConfirmPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.Location = new System.Drawing.Point(202, 293);
             this.txtConfirmPassword.MaxLength = 8;
@@ -213,7 +214,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(202, 207);
             this.txtEmail.MaxLength = 40;
@@ -224,7 +225,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(202, 249);
             this.txtPassword.MaxLength = 8;
@@ -334,7 +335,7 @@
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(202, 123);
             this.txtName.MaxLength = 20;
@@ -346,7 +347,7 @@
             // 
             // txtSurname
             // 
-            this.txtSurname.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtSurname.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtSurname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.Location = new System.Drawing.Point(202, 165);
             this.txtSurname.MaxLength = 20;
@@ -359,7 +360,7 @@
             // lblHead
             // 
             this.lblHead.AutoSize = true;
-            this.lblHead.BackColor = System.Drawing.SystemColors.Control;
+            this.lblHead.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblHead.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold);
             this.lblHead.ForeColor = System.Drawing.Color.Black;
             this.lblHead.Location = new System.Drawing.Point(273, 31);

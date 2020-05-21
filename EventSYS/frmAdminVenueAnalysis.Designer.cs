@@ -51,6 +51,7 @@
             // 
             // txtRevenue
             // 
+            this.txtRevenue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtRevenue.Location = new System.Drawing.Point(402, 383);
             this.txtRevenue.Name = "txtRevenue";
             this.txtRevenue.ReadOnly = true;
@@ -59,6 +60,7 @@
             // 
             // txtNoTicketsSold
             // 
+            this.txtNoTicketsSold.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtNoTicketsSold.Location = new System.Drawing.Point(402, 347);
             this.txtNoTicketsSold.Name = "txtNoTicketsSold";
             this.txtNoTicketsSold.ReadOnly = true;
@@ -67,6 +69,7 @@
             // 
             // txtNoEvents
             // 
+            this.txtNoEvents.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtNoEvents.Location = new System.Drawing.Point(402, 312);
             this.txtNoEvents.Name = "txtNoEvents";
             this.txtNoEvents.ReadOnly = true;
@@ -75,6 +78,7 @@
             // 
             // cboMonth
             // 
+            this.cboMonth.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMonth.FormattingEnabled = true;
             this.cboMonth.Items.AddRange(new object[] {
@@ -97,6 +101,7 @@
             // 
             // cboYear
             // 
+            this.cboYear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboYear.FormattingEnabled = true;
             this.cboYear.Items.AddRange(new object[] {
@@ -109,6 +114,7 @@
             // 
             // cboVenues
             // 
+            this.cboVenues.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cboVenues.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboVenues.FormattingEnabled = true;
             this.cboVenues.Location = new System.Drawing.Point(292, 116);
@@ -227,10 +233,10 @@
             // 
             this.btnConfirm.ActiveBorderThickness = 1;
             this.btnConfirm.ActiveCornerRadius = 20;
-            this.btnConfirm.ActiveFillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfirm.ActiveFillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnConfirm.ActiveLineColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.ButtonText = "Confirm";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -239,8 +245,8 @@
             this.btnConfirm.IdleBorderThickness = 1;
             this.btnConfirm.IdleCornerRadius = 20;
             this.btnConfirm.IdleFillColor = System.Drawing.Color.SeaGreen;
-            this.btnConfirm.IdleForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnConfirm.IdleForecolor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfirm.IdleLineColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirm.Location = new System.Drawing.Point(402, 236);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConfirm.Name = "btnConfirm";
@@ -279,6 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(590, 445);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);

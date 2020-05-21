@@ -121,16 +121,17 @@
   <data name="btnConfirm.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHkAAAAoCAYAAADaKFUbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVHhe7dtNSxtRFMZxP1EXShAT60Iq3RYEg8HGmIog
-        LYLgxoWlaIu0JWleKJUigq2ioK4UXxBLFi0FocXSRdNFoKUloHYx3+CYZwajQ05dz733WfxWuZks/pPM
-        TXKmzfM8IbsxsgMY2QGM7ABGdgAjO+DGyKf/zmXry6GMrT+V/qUpuV1+ILdeJikC0AJNMquPZe14T/6e
-        1dWG8N/IB98/SqKcla7CsPoiFBEvktJZSEu8NCLvPu+oLVsi44x4tDHvP0k9KEVWvJiRweVpqdV/h5qG
-        IiPwnTfj0p5LqQchEwxIX6Nh9U9Nj4x3MAPbAdfrlsi4BvMj2h64Tr86en8VGbtobLK0xWSuRCkr335V
-        g8jYgqO8tpDMhUvv3P7bIDK+a2Erri0ks91deBhE7n09pi4g87XnBoPIsfx9dQHZwY+sPUD2YGQHMLID
-        GNkBjOwARnYAIzvAj4wvzNqDZAc/Msd67OZHxjQB/mzWFpDZ8JO1H7n4YVU68kPqIjLbxObzIDJGRRJF
-        DgzYJl7KyPZJJYgMzw4WpZOTmdboyKdkdG02PP6D6ZB7i5P8X9kSPY3N9OUsdjMyYFSEO23zdZeyUvlx
-        3Owaigyffn71x3Jj3IgZB+M+eAdfDwwtkQEf3U92FxqbsYx6MIoe3OmSXplRb5dRI1/CGYEteBdjRxam
-        enCvGu5Z0xrCjZHJDozsAEZ2ACM7gJGt58kFH9btFjMXPnAAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVHhe7Zs9SyNRFIb3F9ltZWdlZyU2VjYiWCjIWrhb
+        2NgoiCKKgoUooiAsrKyiYCMKoiIIW6wBES38xtVMkkliwtm8dyYDMcePzrl33geeJtzE4nFm7kxOvghx
+        HkZOAIycABg5ATByAmDkBPChyJlCTtL5jGQLfvgK+WzQAk28fDZ85XXejOxV4m6fHsm31THpWBqU5plu
+        aRhuozEQLdCk5+eIbJ7smeDP5VJYrhY1Mv47ji9T0jTZqf4BGj8bxztkK7VfiV1/ZNdFfvQ9GdyYVj+I
+        xt+ulSG58R7CmgE1kXEEM7D94jSO03eVmsg4RWtvova5eLQu+eeC6RpFxiaL12B3/DraLldPd6ZtFBk7
+        NG0xtdeJnWUplIpBZFyLsRXXFlJ7bZ3rN21NZDzsaJntVRdSe8Upu1QuB5FxSOM+S1tI7RZE12RtAbVf
+        wMiOCxjZcQEjOy5gZMcFjOy4gJEdF5jIuGHGjbO2iNptFBmjJJz6cNMoMqYJ8GWztojaKx5V45G1iYzZ
+        oPnD3+pCaq8/1ifNWTraeN1n/vG67Jj7F39M2yhytujL3MGqupja58DahKT9YAQoigwecmlpX/iuvona
+        IyZ8HnNeWPVFZHCdvud3yxaLwCe352HNgLrIAGO5U7sr6ofQ+Nr3a7TmCK6iRga5yjX6782Z2aFxwC++
+        YtgDv3DBL12eKgenxquRq2AL7heD0U4SPzDVg3vht3g3MrEfRk4AjJwAGDkBMLLziPwHNC/3Br0B0dIA
+        AAAASUVORK5CYII=
 </value>
   </data>
 </root>

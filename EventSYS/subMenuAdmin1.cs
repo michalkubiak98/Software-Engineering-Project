@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace EventSYS
 {
-    public partial class subMenuAdmin : UserControl
+    public partial class subMenuAdmin1 : UserControl
     {
-        public subMenuAdmin()
+        public subMenuAdmin1()
         {
             InitializeComponent();
             if (Program.IsInDesignMode()) return;

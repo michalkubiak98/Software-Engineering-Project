@@ -94,7 +94,7 @@ namespace EventSYS
             this.btnReset.ActiveFillColor = System.Drawing.SystemColors.Control;
             this.btnReset.ActiveForecolor = System.Drawing.Color.DimGray;
             this.btnReset.ActiveLineColor = System.Drawing.Color.DimGray;
-            this.btnReset.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReset.BackgroundImage")));
             this.btnReset.ButtonText = "Reset";
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -104,7 +104,7 @@ namespace EventSYS
             this.btnReset.IdleCornerRadius = 20;
             this.btnReset.IdleFillColor = System.Drawing.SystemColors.Control;
             this.btnReset.IdleForecolor = System.Drawing.Color.DimGray;
-            this.btnReset.IdleLineColor = System.Drawing.Color.DimGray;
+            this.btnReset.IdleLineColor = System.Drawing.Color.Empty;
             this.btnReset.Location = new System.Drawing.Point(212, 436);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReset.Name = "btnReset";
@@ -120,7 +120,7 @@ namespace EventSYS
             this.btnConfirm.ActiveFillColor = System.Drawing.Color.MediumSeaGreen;
             this.btnConfirm.ActiveForecolor = System.Drawing.SystemColors.Control;
             this.btnConfirm.ActiveLineColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.ButtonText = "Confirm";
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -130,7 +130,7 @@ namespace EventSYS
             this.btnConfirm.IdleCornerRadius = 20;
             this.btnConfirm.IdleFillColor = System.Drawing.Color.SeaGreen;
             this.btnConfirm.IdleForecolor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnConfirm.IdleLineColor = System.Drawing.Color.Empty;
             this.btnConfirm.Location = new System.Drawing.Point(280, 436);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConfirm.Name = "btnConfirm";
@@ -167,6 +167,7 @@ namespace EventSYS
             // 
             // txtTown
             // 
+            this.txtTown.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTown.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtTown.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtTown.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -185,6 +186,7 @@ namespace EventSYS
             // 
             // txtCounty
             // 
+            this.txtCounty.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtCounty.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtCounty.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtCounty.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -203,6 +205,7 @@ namespace EventSYS
             // 
             // txtManagerEmail
             // 
+            this.txtManagerEmail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtManagerEmail.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtManagerEmail.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtManagerEmail.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -221,6 +224,7 @@ namespace EventSYS
             // 
             // txtManagerName
             // 
+            this.txtManagerName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtManagerName.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtManagerName.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtManagerName.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -239,6 +243,7 @@ namespace EventSYS
             // 
             // txtMaxCapacity
             // 
+            this.txtMaxCapacity.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMaxCapacity.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtMaxCapacity.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtMaxCapacity.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -257,6 +262,7 @@ namespace EventSYS
             // 
             // txtStreet
             // 
+            this.txtStreet.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtStreet.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtStreet.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtStreet.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -275,6 +281,7 @@ namespace EventSYS
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtName.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtName.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtName.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -293,6 +300,7 @@ namespace EventSYS
             // 
             // txtID
             // 
+            this.txtID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(213, 100);
             this.txtID.Name = "txtID";
@@ -410,6 +418,7 @@ namespace EventSYS
             // 
             // txtManagerMobile
             // 
+            this.txtManagerMobile.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtManagerMobile.BorderColorFocused = System.Drawing.Color.Gray;
             this.txtManagerMobile.BorderColorIdle = System.Drawing.Color.Gray;
             this.txtManagerMobile.BorderColorMouseHover = System.Drawing.Color.Gray;
@@ -439,7 +448,7 @@ namespace EventSYS
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdAddVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdAddVenue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdAddVenue.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdAddVenue.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grdAddVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdAddVenue.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdAddVenue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -489,7 +498,7 @@ namespace EventSYS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1110, 503);
             this.Controls.Add(this.grdAddVenue);
             this.Controls.Add(this.txtManagerMobile);
